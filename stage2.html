@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123c63">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RTQCP2HXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9RTQCP2HXM');
+</script>
+<title>STAGE2 虚数単位 i の誕生 ― 本当はおもしろい複素数の世界</title>
+<meta name="description" content="2乗して−1になる数「i」の定義と歴史。カルダノの「足して10、掛けて40」の問題から、デカルトの「想像上の数」という命名、市民権を得るまでの500年を旅するステージ。">
+<link rel="canonical" href="https://ruglerugle.github.io/complex-quest/stage2.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="本当はおもしろい複素数の世界">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="STAGE2 虚数単位 i の誕生 ― 本当はおもしろい複素数の世界">
+<meta property="og:description" content="カルダノの問題からデカルトの命名まで、「想像上の数」が市民権を得るまでの歴史を旅するステージ。">
+<meta property="og:url" content="https://ruglerugle.github.io/complex-quest/stage2.html">
+<meta property="og:image" content="https://ruglerugle.github.io/complex-quest/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="design-system.css">
+<style>
+  .timeline-svg .axis{stroke:var(--ink);stroke-width:1.6}
+  .timeline-svg .dot{fill:var(--gold);stroke:var(--gold-dark);stroke-width:1.5}
+  .timeline-svg .year{fill:var(--gold-dark);font-size:12px;font-weight:900}
+  .timeline-svg .who{fill:var(--ink);font-size:11.5px;font-weight:800}
+  .timeline-svg .what{fill:var(--muted);font-size:10.5px;font-weight:700}
+</style>
+</head>
+<body>
+<div class="app-shell side-collapsed" id="app-shell">
+  <header class="game-header">
+    <div class="brand">
+      <div class="brand-title"><a class="head-reset home-badge" href="index.html" title="トップへ" aria-label="トップへ">🌀</a> <span>本当はおもしろい複素数の世界</span></div>
+      <div class="brand-sub">STAGE 2 ― 虚数単位 i の誕生 ―</div>
+    </div>
+    <div class="head-progress-wrap">
+      <div class="head-progress-label" id="progress-label">クリア 0 / 8</div>
+      <div class="head-progress" role="progressbar" aria-label="クリア済みステージ数" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div class="head-progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+    <div class="header-actions">
+      <button class="head-reset" id="btn-reset-all">🔄 最初から</button>
+      <button class="head-reset" id="head-nav-toggle" title="ステージ一覧の表示切替">☰ ナビ</button>
+    </div>
+  </header>
+
+  <div class="game-layout">
+    <div class="side-backdrop" id="side-backdrop"></div>
+    <aside class="side-panel">
+      <div class="side-head">
+        <button class="side-toggle" id="sidebar-toggle" title="ステージ一覧の表示切替" aria-label="ステージ一覧の表示切替">☰</button>
+        <span class="side-head-text">📚 ステージ一覧</span>
+      </div>
+      <div class="side-list" id="side-list"></div>
+    </aside>
+
+    <main class="main-area">
+      <div class="chapter-head">
+        <span class="chapter-badge">STAGE 2</span><span class="chapter-title">虚数単位 i の誕生</span>
+        <div class="chapter-sub">「想像上の数」と呼ばれた数の歴史</div>
+      </div>
+
+      <div class="mission-box">
+        <div class="mission-label">🎯 ミッション</div>
+        <div class="mission-text">虚数単位 i の定義を知り、「想像上の数」が実際の計算で役に立ってしまった歴史の一幕を目撃しよう。</div>
+        <span class="mission-status" id="mission-status">未達成</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">数直線のどこにもない「2乗して−1になる数」。数学者たちはこれに名前を付けてしまった。それが虚数単位 <strong>i</strong> だ。定義はたったひとつ、<strong>i² ＝ −1</strong>。これだけ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">「存在しないなら、作ってしまえ」ってことですか？ ずいぶん強引な気が……。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">実は当の数学者たちも最初は嫌々だったんだ。1545年、イタリアのカルダノはこんな問題を考えた。<strong>「足すと10、掛けると40になる2つの数を見つけよ」</strong>。うさ美くん、普通に探すと見つかるかな？</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">5と5なら足して10だけど掛けたら25……。2と8なら掛けて16……。足して10になるペアをどう選んでも、積は最大で25にしかなりません。40は無理です！</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">そう、実数では無理。ところがカルダノは「精神の苦痛をものともせず」こう書いた。<strong>5＋√−15 と 5−√−15</strong>。√−15なんて意味不明だが、形式的に計算してみると……。</div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">和：（5＋√−15）＋（5−√−15）＝ 10 ✓</span>
+        <span class="step">積：（5＋√−15）（5−√−15）＝ 5² −（√−15）² ＝ 25 −（−15）＝ 40 ✓</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">わ、本当に和が10で積が40になってる……！ 「意味不明な数」なのに、計算のルールだけはちゃんと守ってくれるんですね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">その後ボンベリは、3次方程式を解く途中でこの数を使うと<strong>最後にはちゃんと実数の正しい答えが出る</strong>ことを示した。途中経過としては認めざるを得ない。デカルトは皮肉を込めて「想像上の数（imaginary number）」と呼んだ――これが「虚数」の語源だ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">悪口が正式名称になっちゃったんですか……。ちょっとかわいそう。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">だが物語はここで終わらない。約250年後、ガウスたちがこの数の「住所」を見つけて、虚数はついに市民権を得る。その住所こそ、次のステージで訪れる<strong>ガウス平面</strong>だ。</div>
+        </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="timeline-svg" viewBox="0 0 460 190" width="100%" role="img" aria-label="虚数の歴史年表。1545年カルダノ、1572年ボンベリ、1637年デカルト、1748年オイラー、1799年ガウス">
+          <line class="axis" x1="30" y1="95" x2="440" y2="95"></line>
+          <polygon points="440,95 431,90 431,100" fill="var(--ink)"></polygon>
+          <g>
+            <circle class="dot" cx="60" cy="95" r="6"></circle>
+            <text class="year" x="60" y="70" text-anchor="middle">1545</text>
+            <text class="who" x="60" y="122" text-anchor="middle">カルダノ</text>
+            <text class="what" x="60" y="138" text-anchor="middle">√−15 を書く</text>
+          </g>
+          <g>
+            <circle class="dot" cx="150" cy="95" r="6"></circle>
+            <text class="year" x="150" y="70" text-anchor="middle">1572</text>
+            <text class="who" x="150" y="122" text-anchor="middle">ボンベリ</text>
+            <text class="what" x="150" y="138" text-anchor="middle">計算規則を整備</text>
+          </g>
+          <g>
+            <circle class="dot" cx="240" cy="95" r="6"></circle>
+            <text class="year" x="240" y="70" text-anchor="middle">1637</text>
+            <text class="who" x="240" y="122" text-anchor="middle">デカルト</text>
+            <text class="what" x="240" y="138" text-anchor="middle">「虚数」と命名</text>
+          </g>
+          <g>
+            <circle class="dot" cx="330" cy="95" r="6"></circle>
+            <text class="year" x="330" y="70" text-anchor="middle">1748</text>
+            <text class="who" x="330" y="122" text-anchor="middle">オイラー</text>
+            <text class="what" x="330" y="138" text-anchor="middle">e と i を結ぶ</text>
+          </g>
+          <g>
+            <circle class="dot" cx="415" cy="95" r="6"></circle>
+            <text class="year" x="415" y="70" text-anchor="middle">1799頃</text>
+            <text class="who" x="415" y="122" text-anchor="middle">ガウス</text>
+            <text class="what" x="415" y="138" text-anchor="middle">平面に住所を発見</text>
+          </g>
+          <text class="what" x="235" y="25" text-anchor="middle">「意味不明な数」が市民権を得るまで、およそ250年</text>
+        </svg>
+        <div class="diagram-caption">虚数は「渋々使われる便利な道具」として250年を過ごし、ガウス平面の発見でついに正式なすみかを得た</div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">虚数単位の定義：i² ＝ −1</span>
+        <span class="step">√−15 ＝ √15 × i のように、負の数の平方根は i で書き表せる</span>
+      </div>
+
+      <div class="quiz-head">確認クイズ</div>
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q1. 虚数単位 i の定義は「i² ＝ ？」</p>
+        <div class="choice-list">
+          <button class="choice-btn">1</button>
+          <button class="choice-btn">−1</button>
+          <button class="choice-btn">i</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 定義はこれだけ。「2乗すると−1になる数」を i と名付けた。ここからすべてが始まる。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q2. カルダノの2つの数（5＋√−15）と（5−√−15）。掛け算するといくつ？</p>
+        <div class="choice-list">
+          <button class="choice-btn">10</button>
+          <button class="choice-btn">25</button>
+          <button class="choice-btn">40</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ （5＋√−15）（5−√−15）＝25−（−15）＝40。「和と積の公式」どおりに計算すると、ちゃんと40が出てくる。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q3. 「想像上の数（虚数）」という呼び名を付けたのは？</p>
+        <div class="choice-list">
+          <button class="choice-btn">デカルト</button>
+          <button class="choice-btn">ガウス</button>
+          <button class="choice-btn">カルダノ</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ デカルトが皮肉を込めて呼んだ「imaginary number」が、そのまま正式名称になった。ちなみにガウスは後年「複素数」というより中立な名前を提案している。</div>
+      </div>
+
+      <div class="stage-nav">
+        <a class="btn" href="index.html">← トップへ</a>
+        <button class="btn btn-primary" id="btn-next" disabled>次へ →</button>
+      </div>
+
+      <div id="book-recommend"></div>
+    </main>
+  </div>
+</div>
+
+<script src="js/progress.js"></script>
+<script>CQ.initStagePage(2);</script>
+</body>
+</html>

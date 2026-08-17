@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123c63">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RTQCP2HXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9RTQCP2HXM');
+</script>
+<title>STAGE3 ガウス平面 ― 数が平面になった ― 本当はおもしろい複素数の世界</title>
+<meta name="description" content="複素数 a+bi をガウス平面（複素数平面）の点として見るステージ。実軸と虚軸、複素数の足し算が「矢印の継ぎ足し」に見える理由を図解で学ぶ。">
+<link rel="canonical" href="https://ruglerugle.github.io/complex-quest/stage3.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="本当はおもしろい複素数の世界">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="STAGE3 ガウス平面 ― 数が平面になった ― 本当はおもしろい複素数の世界">
+<meta property="og:description" content="複素数 a+bi をガウス平面の点として見る。足し算が「矢印の継ぎ足し」に見える理由を図解で学ぶステージ。">
+<meta property="og:url" content="https://ruglerugle.github.io/complex-quest/stage3.html">
+<meta property="og:image" content="https://ruglerugle.github.io/complex-quest/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="design-system.css">
+<style>
+  .plane-svg .grid{stroke:var(--line);stroke-width:1}
+  .plane-svg .axis{stroke:var(--ink);stroke-width:1.6}
+  .plane-svg .axis-label{fill:var(--ink);font-size:11.5px;font-weight:800}
+  .plane-svg .tick-label{fill:var(--muted);font-size:10.5px;font-weight:700}
+  .plane-svg .pt{fill:var(--gold);stroke:var(--gold-dark);stroke-width:1.5}
+  .plane-svg .pt-label{fill:var(--gold-dark);font-size:12.5px;font-weight:900}
+  .plane-svg .vec1{stroke:#2f6fa6;stroke-width:2.5;marker-end:url(#arrB)}
+  .plane-svg .vec2{stroke:#2f8f65;stroke-width:2.5;marker-end:url(#arrG)}
+  .plane-svg .vec-sum{stroke:var(--ng);stroke-width:2.5;stroke-dasharray:6 4;marker-end:url(#arrR)}
+  .plane-svg .vec-label-b{fill:#2f6fa6;font-size:11.5px;font-weight:850}
+  .plane-svg .vec-label-g{fill:#2f8f65;font-size:11.5px;font-weight:850}
+  .plane-svg .vec-label-r{fill:var(--ng);font-size:11.5px;font-weight:850}
+</style>
+</head>
+<body>
+<div class="app-shell side-collapsed" id="app-shell">
+  <header class="game-header">
+    <div class="brand">
+      <div class="brand-title"><a class="head-reset home-badge" href="index.html" title="トップへ" aria-label="トップへ">🌀</a> <span>本当はおもしろい複素数の世界</span></div>
+      <div class="brand-sub">STAGE 3 ― ガウス平面 ― 数が平面になった ―</div>
+    </div>
+    <div class="head-progress-wrap">
+      <div class="head-progress-label" id="progress-label">クリア 0 / 8</div>
+      <div class="head-progress" role="progressbar" aria-label="クリア済みステージ数" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div class="head-progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+    <div class="header-actions">
+      <button class="head-reset" id="btn-reset-all">🔄 最初から</button>
+      <button class="head-reset" id="head-nav-toggle" title="ステージ一覧の表示切替">☰ ナビ</button>
+    </div>
+  </header>
+
+  <div class="game-layout">
+    <div class="side-backdrop" id="side-backdrop"></div>
+    <aside class="side-panel">
+      <div class="side-head">
+        <button class="side-toggle" id="sidebar-toggle" title="ステージ一覧の表示切替" aria-label="ステージ一覧の表示切替">☰</button>
+        <span class="side-head-text">📚 ステージ一覧</span>
+      </div>
+      <div class="side-list" id="side-list"></div>
+    </aside>
+
+    <main class="main-area">
+      <div class="chapter-head">
+        <span class="chapter-badge">STAGE 3</span><span class="chapter-title">ガウス平面 ― 数が平面になった</span>
+        <div class="chapter-sub">複素数は「点」である</div>
+      </div>
+
+      <div class="mission-box">
+        <div class="mission-label">🎯 ミッション</div>
+        <div class="mission-text">複素数 a＋bi をガウス平面の点として置けるようになり、足し算を「矢印の継ぎ足し」として見よう。</div>
+        <span class="mission-status" id="mission-status">未達成</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">前のステージで「i の住所」の話をしたね。発想はこうだ。実数が数直線という<strong>横一列の直線</strong>に住んでいるなら――i には<strong>上方向</strong>に住んでもらえばいい。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">上、ですか！？ 数直線の外に飛び出しちゃうんですね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">そう。横軸はいつもの数直線で<strong>実軸</strong>と呼ぶ。縦軸には i、2i、3i……を並べて<strong>虚軸</strong>と呼ぶ。すると複素数 <strong>a＋bi</strong> は「右に a、上に b」進んだ<strong>平面上の1点</strong>になる。この平面が<strong>ガウス平面（複素数平面）</strong>だ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">じゃあ 3＋2i は「右に3、上に2」の点。座標でいう（3, 2）の場所ですね。……あれ？ そうすると普通の実数3は（3, 0）、純粋な虚数2iは（0, 2）。実数も虚数も、ぜんぶ同じ平面の住人になるんだ！</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">いいところに気づいた。「数」の世界が直線から平面へ、1次元から2次元へ広がったんだ。では足し算はどう見えるか。（3＋2i）＋（1＋i）を計算してごらん。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">実数どうし、iの付いた数どうしを足して……（3＋1）＋（2＋1）i＝<strong>4＋3i</strong>。あ、これって「右に1、上に1」だけ点が引っ越しただけですね！</div>
+        </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="plane-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="ガウス平面上で(3+2i)+(1+i)=4+3i を矢印の継ぎ足しとして表した図">
+          <defs>
+            <marker id="arrB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2f6fa6"></path></marker>
+            <marker id="arrG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#2f8f65"></path></marker>
+            <marker id="arrR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="#c8433f"></path></marker>
+          </defs>
+          <!-- grid: origin (90,250), unit 70px -->
+          <g class="grid">
+            <line x1="90" y1="40" x2="440" y2="40"></line>
+            <line x1="90" y1="110" x2="440" y2="110"></line>
+            <line x1="90" y1="180" x2="440" y2="180"></line>
+            <line x1="160" y1="20" x2="160" y2="250"></line>
+            <line x1="230" y1="20" x2="230" y2="250"></line>
+            <line x1="300" y1="20" x2="300" y2="250"></line>
+            <line x1="370" y1="20" x2="370" y2="250"></line>
+          </g>
+          <line class="axis" x1="70" y1="250" x2="445" y2="250"></line>
+          <polygon points="445,250 436,245 436,255" fill="var(--ink)"></polygon>
+          <line class="axis" x1="90" y1="270" x2="90" y2="15"></line>
+          <polygon points="90,15 85,24 95,24" fill="var(--ink)"></polygon>
+          <text class="axis-label" x="430" y="268">実軸</text>
+          <text class="axis-label" x="100" y="24">虚軸</text>
+          <text class="tick-label" x="160" y="266" text-anchor="middle">1</text>
+          <text class="tick-label" x="230" y="266" text-anchor="middle">2</text>
+          <text class="tick-label" x="300" y="266" text-anchor="middle">3</text>
+          <text class="tick-label" x="370" y="266" text-anchor="middle">4</text>
+          <text class="tick-label" x="76" y="184" text-anchor="end">i</text>
+          <text class="tick-label" x="76" y="114" text-anchor="end">2i</text>
+          <text class="tick-label" x="76" y="44" text-anchor="end">3i</text>
+          <!-- vectors -->
+          <line class="vec1" x1="90" y1="250" x2="296" y2="114"></line>
+          <text class="vec-label-b" x="150" y="200">3＋2i</text>
+          <line class="vec2" x1="300" y1="110" x2="366" y2="44"></line>
+          <text class="vec-label-g" x="336" y="94">＋(1＋i)</text>
+          <line class="vec-sum" x1="90" y1="250" x2="364" y2="42"></line>
+          <text class="vec-label-r" x="200" y="120">合計 4＋3i</text>
+          <circle class="pt" cx="300" cy="110" r="6"></circle>
+          <circle class="pt" cx="370" cy="40" r="6"></circle>
+          <text class="pt-label" x="382" y="36">4＋3i</text>
+        </svg>
+        <div class="diagram-caption">複素数の足し算は、矢印（ベクトル）の継ぎ足し。（3＋2i）に（1＋i）を足すと、点が「右に1・上に1」だけ平行移動する</div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">複素数 a＋bi ⇔ ガウス平面の点（a, b）</span>
+        <span class="step">（3＋2i）＋（1＋i）＝（3＋1）＋（2＋1）i ＝ 4＋3i　…… 足し算 ＝ 平行移動</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">足し算の正体は「平行移動」だとわかった。では<strong>掛け算</strong>は平面の上で何をする操作なのか？ ここからが複素数のいちばん面白いところだよ。</div>
+        </div>
+      </div>
+
+      <div class="quiz-head">確認クイズ</div>
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q1. 複素数 3＋2i は、ガウス平面のどの位置にある？</p>
+        <div class="choice-list">
+          <button class="choice-btn">右に3、上に2 の点</button>
+          <button class="choice-btn">右に2、上に3 の点</button>
+          <button class="choice-btn">右に3、下に2 の点</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 実部3が「右にいくつ」、虚部2が「上にいくつ」。座標の（3, 2）に対応する点だ。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q2. （3＋2i）＋（1＋i）は？</p>
+        <div class="choice-list">
+          <button class="choice-btn">4＋3i</button>
+          <button class="choice-btn">4＋2i</button>
+          <button class="choice-btn">3＋3i</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 実部どうし（3＋1）、虚部どうし（2＋1）を足せばいい。平面の上では点が右に1・上に1だけ引っ越す。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q3. 虚軸の上（原点以外）にある点は、どんな数？</p>
+        <div class="choice-list">
+          <button class="choice-btn">実数</button>
+          <button class="choice-btn">純虚数（bi の形の数）</button>
+          <button class="choice-btn">負の数</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 虚軸上の点は i、2i、−3i のような「実部が0の数」＝純虚数。ちなみに実軸上の点はいつもの実数だ。</div>
+      </div>
+
+      <div class="stage-nav">
+        <a class="btn" href="index.html">← トップへ</a>
+        <button class="btn btn-primary" id="btn-next" disabled>次へ →</button>
+      </div>
+
+      <div id="book-recommend"></div>
+    </main>
+  </div>
+</div>
+
+<script src="js/progress.js"></script>
+<script>CQ.initStagePage(3);</script>
+</body>
+</html>

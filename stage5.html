@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123c63">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9RTQCP2HXM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-9RTQCP2HXM');
+</script>
+<title>STAGE5 長さと角度で表す ― 極形式 ― 本当はおもしろい複素数の世界</title>
+<meta name="description" content="複素数の絶対値と偏角。三平方の定理で長さを求め、複素数を「長さと角度」の極形式で表すと、掛け算が「長さは掛け算・角度は足し算」というシンプルなルールになることを学ぶステージ。">
+<link rel="canonical" href="https://ruglerugle.github.io/complex-quest/stage5.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="本当はおもしろい複素数の世界">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="STAGE5 長さと角度で表す ― 極形式 ― 本当はおもしろい複素数の世界">
+<meta property="og:description" content="絶対値と偏角で複素数を表し直すと、掛け算が「長さは掛け算・角度は足し算」になる美しさを学ぶステージ。">
+<meta property="og:url" content="https://ruglerugle.github.io/complex-quest/stage5.html">
+<meta property="og:image" content="https://ruglerugle.github.io/complex-quest/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="design-system.css">
+<style>
+  .polar-svg .axis{stroke:var(--ink);stroke-width:1.5}
+  .polar-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
+  .polar-svg .tri{fill:rgba(217,164,65,.12);stroke:none}
+  .polar-svg .hyp{stroke:var(--gold-dark);stroke-width:2.5}
+  .polar-svg .leg{stroke:#2f6fa6;stroke-width:2;stroke-dasharray:5 4}
+  .polar-svg .pt{fill:var(--gold);stroke:var(--gold-dark);stroke-width:1.5}
+  .polar-svg .pt-label{fill:var(--gold-dark);font-size:13px;font-weight:900}
+  .polar-svg .len-label{fill:var(--gold-dark);font-size:12px;font-weight:850}
+  .polar-svg .leg-label{fill:#2f6fa6;font-size:11.5px;font-weight:800}
+  .polar-svg .ang-arc{fill:none;stroke:var(--ng);stroke-width:2}
+  .polar-svg .ang-label{fill:var(--ng);font-size:12px;font-weight:850}
+</style>
+</head>
+<body>
+<div class="app-shell side-collapsed" id="app-shell">
+  <header class="game-header">
+    <div class="brand">
+      <div class="brand-title"><a class="head-reset home-badge" href="index.html" title="トップへ" aria-label="トップへ">🌀</a> <span>本当はおもしろい複素数の世界</span></div>
+      <div class="brand-sub">STAGE 5 ― 長さと角度で表す ― 極形式 ―</div>
+    </div>
+    <div class="head-progress-wrap">
+      <div class="head-progress-label" id="progress-label">クリア 0 / 8</div>
+      <div class="head-progress" role="progressbar" aria-label="クリア済みステージ数" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0"><div class="head-progress-fill" id="progress-fill" style="width:0%"></div></div>
+    </div>
+    <div class="header-actions">
+      <button class="head-reset" id="btn-reset-all">🔄 最初から</button>
+      <button class="head-reset" id="head-nav-toggle" title="ステージ一覧の表示切替">☰ ナビ</button>
+    </div>
+  </header>
+
+  <div class="game-layout">
+    <div class="side-backdrop" id="side-backdrop"></div>
+    <aside class="side-panel">
+      <div class="side-head">
+        <button class="side-toggle" id="sidebar-toggle" title="ステージ一覧の表示切替" aria-label="ステージ一覧の表示切替">☰</button>
+        <span class="side-head-text">📚 ステージ一覧</span>
+      </div>
+      <div class="side-list" id="side-list"></div>
+    </aside>
+
+    <main class="main-area">
+      <div class="chapter-head">
+        <span class="chapter-badge">STAGE 5</span><span class="chapter-title">長さと角度で表す ― 極形式</span>
+        <div class="chapter-sub">絶対値と偏角</div>
+      </div>
+
+      <div class="mission-box">
+        <div class="mission-label">🎯 ミッション</div>
+        <div class="mission-text">複素数を「原点からの長さ」と「角度」で表し直して、掛け算のルールが「長さは掛け算・角度は足し算」になることを確かめよう。</div>
+        <span class="mission-status" id="mission-status">未達成</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">「×i は90度回転」だとわかった。じゃあ「×(1＋i)」は何度の回転だろう？ それを考えるために、複素数の<strong>住所の書き方をもう1つ</strong>用意しよう。「右にa、上にb」の代わりに、<strong>「原点からの長さ」と「実軸からの角度」</strong>で表すんだ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">地図でいうと「東に3km、北に4km」じゃなくて「北東の方角に5km」みたいな言い方ですね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">まさにそれ。長さは<strong>絶対値</strong>と呼ばれ、|a＋bi| と書く。求め方は図を見れば一目瞭然――直角三角形の斜辺だから、<strong>三平方の定理</strong>だ。3＋4i なら √(3²＋4²)＝√25＝5。角度のほうは<strong>偏角</strong>と呼ぶ。</div>
+        </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="polar-svg" viewBox="0 0 460 290" width="100%" role="img" aria-label="ガウス平面上の点3+4iについて、原点からの長さ5（三平方の定理）と偏角θを示した図">
+          <!-- origin (110,240), unit 55px -->
+          <polygon class="tri" points="110,240 275,240 275,20"></polygon>
+          <line class="axis" x1="70" y1="240" x2="420" y2="240"></line>
+          <polygon points="420,240 411,235 411,245" fill="var(--ink)"></polygon>
+          <line class="axis" x1="110" y1="275" x2="110" y2="15"></line>
+          <polygon points="110,15 105,24 115,24" fill="var(--ink)"></polygon>
+          <text class="axis-label" x="404" y="258">実軸</text>
+          <text class="axis-label" x="120" y="24">虚軸</text>
+          <line class="leg" x1="110" y1="240" x2="275" y2="240" style="stroke-dasharray:none"></line>
+          <line class="leg" x1="275" y1="240" x2="275" y2="20"></line>
+          <line class="hyp" x1="110" y1="240" x2="275" y2="20"></line>
+          <circle class="pt" cx="275" cy="20" r="7"></circle>
+          <text class="pt-label" x="288" y="24">3＋4i</text>
+          <text class="leg-label" x="185" y="260" text-anchor="middle">3</text>
+          <text class="leg-label" x="290" y="136">4</text>
+          <text class="len-label" x="150" y="140">長さ｜3＋4i｜＝√(3²＋4²)＝5</text>
+          <path class="ang-arc" d="M 155 240 A 45 45 0 0 0 147 213"></path>
+          <text class="ang-label" x="163" y="222">θ（偏角）</text>
+        </svg>
+        <div class="diagram-caption">絶対値（原点からの長さ）は三平方の定理で求まる。ステージ5にして、中学数学のエースが登場</div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">絶対値：|a＋bi| ＝ √(a²＋b²)　……三平方の定理そのもの</span>
+        <span class="step">極形式：複素数 ＝ 長さ r ×（cos θ ＋ i sin θ）　……「長さ」と「角度」で表す書き方</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">この書き方にすると、掛け算のルールが驚くほど美しくなる。<strong>「長さは掛け算、角度は足し算」</strong>。これだけだ。×i を思い出そう。i は「長さ1・角度90度」だから、掛けても長さは変わらず、角度だけ90度増える――まさに90度回転だ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">じゃあ試してみます。1＋i は「長さ√2・角度45度」ですよね。これを2乗すると……長さは√2×√2＝2、角度は45度＋45度＝90度。「長さ2・角度90度」の点って……<strong>2i</strong> だ！</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">検算しよう。（1＋i）²＝1＋2i＋i²＝1＋2i−1＝2i。ぴったり一致！ 面倒な展開計算をしなくても、<strong>「長さと角度」で考えれば掛け算の結果が図形的にわかる</strong>。これが極形式の威力だよ。</div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">掛け算のルール：長さは掛け算、偏角は足し算</span>
+        <span class="step">例：1＋i（長さ√2・角度45°）を2乗 → 長さ2・角度90° ＝ 2i</span>
+        <span class="step">検算：（1＋i）² ＝ 1＋2i＋i² ＝ 2i ✓</span>
+      </div>
+
+      <div class="quiz-head">確認クイズ</div>
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q1. |3＋4i|（3＋4i の絶対値）は？</p>
+        <div class="choice-list">
+          <button class="choice-btn">5</button>
+          <button class="choice-btn">7</button>
+          <button class="choice-btn">25</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ √(3²＋4²)＝√25＝5。有名な「3:4:5」の直角三角形だ。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q2. 複素数どうしを掛け算すると、偏角（角度）はどうなる？</p>
+        <div class="choice-list">
+          <button class="choice-btn">掛け算される</button>
+          <button class="choice-btn">足し算される</button>
+          <button class="choice-btn">変わらない</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 「長さは掛け算、角度は足し算」。掛け算が回転になる理由はここにある。</div>
+      </div>
+
+      <div class="quiz-card" data-quiz>
+        <p class="quiz-q">Q3. （1＋i）² は？</p>
+        <div class="choice-list">
+          <button class="choice-btn">2i</button>
+          <button class="choice-btn">−2</button>
+          <button class="choice-btn">2</button>
+        </div>
+        <div class="quiz-explain" hidden>正解！ 長さ√2→2、角度45°→90°で「長さ2・角度90°」＝2i。展開計算（1＋2i＋i²）でも同じ答えになる。</div>
+      </div>
+
+      <div class="stage-nav">
+        <a class="btn" href="index.html">← トップへ</a>
+        <button class="btn btn-primary" id="btn-next" disabled>次へ →</button>
+      </div>
+
+      <div id="book-recommend"></div>
+    </main>
+  </div>
+</div>
+
+<script src="js/progress.js"></script>
+<script>CQ.initStagePage(5);</script>
+</body>
+</html>
