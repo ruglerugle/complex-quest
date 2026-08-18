@@ -134,6 +134,20 @@
           </div>
           <div class="dialog-bubble">その通り。この「<strong>持っている量が多いほど、増えるペースも速い</strong>」――言い換えると「増える速さが、常に今の量に比例する」成長を、切れ目なく続けたものが関数 e^x だ。お金も細菌も人口も、ほうっておくと勝手に増えるものは、みんなこの形になる。</div>
         </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">でも待ってください。「量に比例して増える」だけなら、2^x や 10^x でも同じですよね？ 2倍に育てば増えるペースも2倍。e だけの特徴ではない気がします。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">いい質問だ。そのとおりで、1より大きい数の x乗はどれも「今の量に比例」して増える。違うのは<strong>比例の度合い</strong>でね。2^x は今の量の約0.69倍、10^x は約2.3倍の速さで増える。そのなかで e^x だけが、増える速さが今の量と<strong>ぴったり等しい</strong>（ちょうど1倍）。だから e は「成長の速さの基準」になる数なんだ。この「ぴったり1倍」が、このあとの回転の話で効いてくるよ。</div>
+        </div>
       </div>
 
       <div class="diagram-box">
@@ -168,7 +182,8 @@
 
       <div class="formula-box">
         <span class="step">（1＋1/n）ⁿ は、n を大きくすると e＝2.71828… に近づく</span>
-        <span class="step">e^x ＝「増える速さが、常に今の量に比例する」連続成長（持っている量が多いほど、増えるペースも速い）</span>
+        <span class="step">e^x ＝ 増える速さが、常に今の量と<strong>ぴったり等しい</strong>連続成長</span>
+        <span class="step">（2^x や 10^x も「量に比例」して増えるが、速さ＝今の量×1 になるのは e^x だけ）</span>
       </div>
 
       <div class="dialogue-scene">
@@ -177,7 +192,7 @@
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">さあ、ここからが今日のクライマックスだ。指数のxに、<strong>虚数 iθ</strong> を入れたら何が起きるか。e^x の成長は「進む向きに、今の量に比例して伸びる」。ところが<strong>×i は90度回転</strong>だったね。つまり e^iθ の成長は――<strong>常に進行方向と直角</strong>に働く。</div>
+          <div class="dialog-bubble">さあ、ここからが今日のクライマックスだ。指数のxに、<strong>虚数 iθ</strong> を入れたら何が起きるか。e^x の成長は「進む向きに、今の量と同じ大きさの速さで伸びる」。ところが<strong>×i は90度回転</strong>だったね。つまり e^iθ の成長は――<strong>常に進行方向と直角</strong>に働く。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -242,11 +257,11 @@
       <div class="quiz-card" data-quiz>
         <p class="quiz-q">Q2. 関数 e^x の特徴として正しいのは？</p>
         <div class="choice-list">
-          <button class="choice-btn">増える速さが、常に今の量に比例する</button>
+          <button class="choice-btn">増える速さが、常に今の量とぴったり等しい</button>
           <button class="choice-btn">常に一定の速さで増える</button>
           <button class="choice-btn">増え方がだんだん止まる</button>
         </div>
-        <div class="quiz-explain" hidden>正解！ 「持っている量が多いほど、速く増える」。人口増加や細菌の増殖など、自然界の成長がe^xで書ける理由がこれだ。</div>
+        <div class="quiz-explain" hidden>正解！ 2^xなども「量に比例」して増えるけれど、速さが今の量とぴったり等しく（1倍に）なるのは e^x だけ。この性質が e^iθ の回転の話を支えている。</div>
       </div>
 
       <div class="quiz-card" data-quiz>
