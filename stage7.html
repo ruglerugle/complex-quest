@@ -303,7 +303,35 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">その通り！ 直角に引っ張られる限り、原点からの距離は伸びも縮みもしない。だから e^iθ の点は<strong>長さ1のまま、単位円の上をぐるぐる回る</strong>。そしてθは「回った弧の長さ」になる。弧の長さで角度を測る流儀を<strong>ラジアン</strong>と呼ぶんだ。半径1の円の半周は、円周率そのもの――<strong>π</strong>だよ。</div>
+          <div class="dialog-bubble">その通り、ハンマー投げのイメージで完璧だ。順番に確かめよう。まず<strong>原点からの距離</strong>。動く向きが「原点と自分を結ぶロープ」と直角である限り、原点に近づくことも、離れることもできない。ロープはピンと張ったまま、長さが変わらないんだ。スタートは 1、つまり原点から距離1の点だから、点はずっと<strong>原点から距離1の場所だけ</strong>を動く。距離1の点を集めた円が<strong>単位円</strong>――だから「単位円の上をぐるぐる回る」ことになる。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">距離1は保たれる、と。じゃあ、円の上を<strong>どれくらいの速さ</strong>で回るんですか？</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">そこで、さっき電卓で確かめた「e の増える速さは<strong>今の量とぴったり等しい</strong>（×1）」が効いてくる。今の量の大きさはずっと1のままだから、<strong>点が円周を進む速さも、ずっと1</strong>。速さ1で θ のあいだ進めば、進んだ道のりは 1×θ＝θ。つまり <strong>θ は、点が円周に沿って歩いた道のり（＝弧の長さ）そのもの</strong>なんだ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">θ は「何度回ったか」というより、「<strong>円周上を何メートル歩いたか</strong>」みたいな数なんですね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">いい言い方だ。実は「回った角度を、その弧の長さで表す」測り方には<strong>ラジアン</strong>という名前が付いている。ここで、小学校で習った円周の公式を思い出そう。<strong>円周 ＝ 直径 × 円周率 ＝ 2 × 半径 × π</strong>。半径1の単位円なら、一周の道のりは 2π。だから<strong>半周なら π、4分の1周なら π/2</strong>。「半周まわる」は、ラジアンでは「θ＝π」と書けるわけだ。</div>
         </div>
       </div>
 
@@ -336,8 +364,10 @@
       </div>
 
       <div class="formula-box">
-        <span class="step">e^iθ ＝ 単位円の上を、弧の長さ θ だけ回った点</span>
-        <span class="step">角度の新しい測り方（ラジアン）：半径1の円の弧の長さで測る。半周（180°）＝ π</span>
+        <span class="step">動く向きが常にロープ（半径）と直角 → 原点からの距離は1のまま ＝ 単位円の上を進む</span>
+        <span class="step">速さ ＝ 今の量 × 1 ＝ 1　→　θ のあいだに進む道のり ＝ 1 × θ ＝ θ（弧の長さ）</span>
+        <span class="step">ラジアン ＝ 角度を「弧の長さ」で測る流儀。円周＝2πr より、半径1の一周＝2π、半周＝π、4分の1周＝π/2</span>
+        <span class="step">まとめ：e^iθ ＝ 単位円の上を、弧の長さ θ だけ回った点</span>
       </div>
 
       <div class="quiz-head">確認クイズ</div>
