@@ -295,34 +295,32 @@
 
       <div class="diagram-box">
         <div class="dual-graph">
-        <svg class="exp-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="2^x、e^x、10^x のグラフ。3本ともスタートは1で、定数0.69、1、2.3の順に立ち上がりが急になる">
-          <line class="axis" x1="70" y1="250" x2="435" y2="250"></line>
-          <polygon points="435,250 426,245 426,255" fill="var(--ink)"></polygon>
-          <line class="axis" x1="70" y1="272" x2="70" y2="20"></line>
-          <polygon points="70,20 65,29 75,29" fill="var(--ink)"></polygon>
-          <text class="axis-label" x="424" y="268">x</text>
-          <text class="axis-label" x="78" y="30">量</text>
-          <text class="tick-label" x="70" y="266" text-anchor="middle">0</text>
-          <text class="tick-label" x="245" y="266" text-anchor="middle">1</text>
-          <text class="tick-label" x="420" y="266" text-anchor="middle">2</text>
-          <text class="tick-label" x="62" y="199" text-anchor="end">1</text>
-          <text class="tick-label" x="62" y="144" text-anchor="end">2</text>
-          <text class="tick-label" x="62" y="34" text-anchor="end">4</text>
-          <line class="base-line" x1="70" y1="195" x2="420" y2="195"></line>
-          <!-- 10^x（x=0.602で上端に到達） -->
-          <polyline class="ln-ten" points="70,195 87.5,180.8 105,162.8 122.5,140.3 140,111.8 157.5,76.1 175.4,30"></polyline>
-          <text class="curve-label" x="150" y="22" style="fill:#2f8f65">10^x</text>
-          <!-- e^x（x=1.386で上端に到達） -->
-          <polyline class="ln-e" points="70,195 105,182.8 140,167.9 175,149.8 210,127.6 245,100.5 280,67.4 312.6,30"></polyline>
-          <text class="curve-label" x="292" y="22" style="fill:var(--gold-dark)">e^x</text>
-          <!-- 2^x -->
-          <polyline class="ln-two" points="70,195 113.8,184.6 157.5,172.2 201.3,157.5 245,140 288.8,119.2 332.5,94.4 376.3,65 420,30"></polyline>
-          <text class="curve-label" x="400" y="22" style="fill:#2f6fa6">2^x</text>
+        <svg class="exp-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="2^x、e^x、10^x のグラフ（縦横同じ目盛り）。3本ともスタートは1で、定数0.69、1、2.3の順に立ち上がりが急になる">
+          <line class="axis" x1="96" y1="260" x2="348" y2="260"></line>
+          <polygon points="348,260 339,255 339,265" fill="var(--ink)"></polygon>
+          <line class="axis" x1="110" y1="276" x2="110" y2="30"></line>
+          <polygon points="110,30 105,39 115,39" fill="var(--ink)"></polygon>
+          <text class="axis-label" x="342" y="278">x</text>
+          <text class="axis-label" x="96" y="38" text-anchor="end">量</text>
+          <text class="tick-label" x="110" y="276" text-anchor="middle">0</text>
+          <text class="tick-label" x="220" y="276" text-anchor="middle">1</text>
+          <text class="tick-label" x="330" y="276" text-anchor="middle">2</text>
+          <text class="tick-label" x="102" y="264" text-anchor="end">1</text>
+          <text class="tick-label" x="102" y="154" text-anchor="end">2</text>
+          <text class="tick-label" x="102" y="44" text-anchor="end">3</text>
+          <!-- 縦横とも 1単位＝110px の等倍目盛り。各曲線は量3で上端から抜ける -->
+          <polyline class="ln-ten" points="110,260 121,231.5 132,195.7 143,150.6 154,93.7 162.5,40"></polyline>
+          <text class="curve-label" x="140" y="30" style="fill:#2f8f65">10^x</text>
+          <polyline class="ln-e" points="110,260 132,235.7 154,205.9 176,169.6 198,125.1 220,71 230.9,40"></polyline>
+          <text class="curve-label" x="212" y="30" style="fill:var(--gold-dark)">e^x</text>
+          <polyline class="ln-two" points="110,260 137.5,239.2 165,214.5 192.5,185 220,150 247.5,108.4 284.4,40"></polyline>
+          <text class="curve-label" x="272" y="30" style="fill:#2f6fa6">2^x</text>
           <!-- 凡例 -->
           <g>
-            <line class="ln-ten" x1="290" y1="185" x2="318" y2="185"></line><text class="lg" x="324" y="189" style="fill:#2f8f65">10^x（定数 2.3）</text>
-            <line class="ln-e" x1="290" y1="205" x2="318" y2="205"></line><text class="lg" x="324" y="209" style="fill:var(--gold-dark)">e^x（定数 1）</text>
-            <line class="ln-two" x1="290" y1="225" x2="318" y2="225"></line><text class="lg" x="324" y="229" style="fill:#2f6fa6">2^x（定数 0.69）</text>
+            <text class="lg" x="344" y="110" style="fill:#2f8f65">10^x（定数 2.3）</text>
+            <text class="lg" x="344" y="132" style="fill:var(--gold-dark)">e^x（定数 1）</text>
+            <text class="lg" x="344" y="154" style="fill:#2f6fa6">2^x（定数 0.69）</text>
+            <text class="lg" x="344" y="182" style="fill:var(--muted)">縦・横は同じ目盛り</text>
           </g>
         </svg>
         <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.3）を縦横同じ目盛りで拡大した図。傾き1の点線はちょうど45度で、3本の曲線の出だしの傾きが0.69、1、2.3になっていることが見える">
@@ -352,7 +350,7 @@
           <text class="curve-label" x="346" y="110" style="fill:#2f6fa6">2^x</text>
         </svg>
         </div>
-        <div class="diagram-caption">1枚目：3本ともスタートは同じ1で、「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が 0.69＜1＜2.3 の順に立ち上がりが急になる。2枚目（拡大図）：縦横の目盛りをそろえてスタート付近を拡大すると「傾き1」の点線はちょうど45°の坂になり、電卓で出てきた定数が「スタート地点での曲線の傾き」そのものだとわかる。曲線が点線から上へ離れていくのは、量が増えるほど増えるペース自体も速くなるから</div>
+        <div class="diagram-caption">どちらのグラフも、縦と横は同じ目盛り。1枚目：3本ともスタートは同じ1で、「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が 0.69＜1＜2.3 の順に立ち上がりが急になる。2枚目（拡大図）：縦横の目盛りをそろえてスタート付近を拡大すると「傾き1」の点線はちょうど45°の坂になり、電卓で出てきた定数が「スタート地点での曲線の傾き」そのものだとわかる。曲線が点線から上へ離れていくのは、量が増えるほど増えるペース自体も速くなるから</div>
       </div>
 
       <div class="dialogue-scene">
