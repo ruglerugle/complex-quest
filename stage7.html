@@ -65,6 +65,14 @@
   .zoom-svg .curve-label{font-size:12px;font-weight:900}
   .zoom-svg .plot-frame{fill:none;stroke:var(--line);stroke-width:1.2}
   .zoom-svg .base-line{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
+  .radian-svg .circle-base{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 4}
+  .radian-svg .arc-gold{fill:none;stroke:var(--gold-dark);stroke-width:3.5;marker-end:url(#arrRadian)}
+  .radian-svg .arc-full{fill:none;stroke:var(--gold-dark);stroke-width:3.5}
+  .radian-svg .start-dot{fill:var(--ink)}
+  .radian-svg .radius-line{stroke:var(--ink);stroke-width:1.5}
+  .radian-svg .radius-label{fill:var(--ink);font-size:10.5px;font-weight:800}
+  .radian-svg .lbl-title{fill:var(--ink);font-size:12.5px;font-weight:900}
+  .radian-svg .lbl-val{fill:var(--gold-dark);font-size:11.5px;font-weight:850}
   .dual-graph{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;justify-content:center}
   .dual-graph svg{flex:1 1 300px;min-width:270px;max-width:460px}
   .circle-svg .axis{stroke:var(--ink);stroke-width:1.5}
@@ -450,6 +458,44 @@
           </div>
           <div class="dialog-bubble">その質問に答える前に、<strong>角度の測り方の約束</strong>をひとつさせてほしい。ふだん角度は「一周＝360度」で数えるね。数学にはもうひとつ、<strong>「単位円の上を歩いた弧の長さ」そのもので角度を表す</strong>測り方があって、これを<strong>ラジアン</strong>と呼ぶ。小学校で習った円周の公式――<strong>円周 ＝ 直径 × 円周率 ＝ 2 × 半径 × π</strong>――を使うと、半径1の単位円の一周の道のりは 2π。だからラジアンでは<strong>一周＝2π、半周＝π、4分の1周＝π/2</strong> になる。</div>
         </div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="radian-svg" viewBox="0 0 460 270" width="100%" role="img" aria-label="半径1の円で、4分の1周の弧の長さはπ/2、半周はπ、一周は2πになることを示す3つの図">
+          <defs>
+            <marker id="arrRadian" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 z" fill="var(--gold-dark)"></path></marker>
+          </defs>
+          <!-- 4分の1周 -->
+          <g>
+            <circle class="circle-base" cx="90" cy="140" r="55"></circle>
+            <path class="arc-gold" d="M 145 140 A 55 55 0 0 0 90 85"></path>
+            <circle class="start-dot" cx="145" cy="140" r="3.5"></circle>
+            <text class="lbl-title" x="90" y="225" text-anchor="middle">4分の1周（90°）</text>
+            <text class="lbl-val" x="90" y="245" text-anchor="middle">弧の長さ ＝ π/2 ≈ 1.57</text>
+          </g>
+          <!-- 半周 -->
+          <g>
+            <circle class="circle-base" cx="230" cy="140" r="55"></circle>
+            <path class="arc-gold" d="M 285 140 A 55 55 0 0 0 175 140"></path>
+            <circle class="start-dot" cx="285" cy="140" r="3.5"></circle>
+            <text class="lbl-title" x="230" y="225" text-anchor="middle">半周（180°）</text>
+            <text class="lbl-val" x="230" y="245" text-anchor="middle">弧の長さ ＝ π ≈ 3.14</text>
+          </g>
+          <!-- 一周 -->
+          <g>
+            <circle class="circle-base" cx="370" cy="140" r="55"></circle>
+            <circle class="arc-full" cx="370" cy="140" r="55"></circle>
+            <line class="radius-line" x1="370" y1="140" x2="425" y2="140"></line>
+            <text class="radius-label" x="396" y="133" text-anchor="middle">半径1</text>
+            <circle class="start-dot" cx="425" cy="140" r="3.5"></circle>
+            <text class="lbl-title" x="370" y="225" text-anchor="middle">一周（360°）</text>
+            <text class="lbl-val" x="370" y="245" text-anchor="middle">弧の長さ ＝ 2π ≈ 6.28</text>
+          </g>
+        </svg>
+        <div class="diagram-caption">ラジアン ＝「単位円の上を歩いた弧の長さ」で角度を言い表す測り方。円周＝2×半径×π なので、半径1なら一周の道のりが 2π。半分歩けば π、4分の1なら π/2</div>
+      </div>
+
+      <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
