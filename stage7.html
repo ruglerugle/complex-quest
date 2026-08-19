@@ -25,6 +25,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "STAGE7 e",
+    "description": "利息の計算から生まれた自然対数の底 e=2.718…。「成長し続ける数」eの正体と、指数が虚数になった e^iθ が「曲がり続ける成長＝円運動」になる直感を手に入れるステージ。",
+    "url": "https://ruglerugle.github.io/complex-quest/stage7.html",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "learningResourceType": "learning activity",
+    "educationalLevel": "高校生以上（意欲のある中学生も歓迎）",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "本当はおもしろい複素数の世界",
+      "url": "https://ruglerugle.github.io/complex-quest/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "ruglerugle"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "本当はおもしろい複素数の世界",
+        "item": "https://ruglerugle.github.io/complex-quest/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "STAGE7 e",
+        "item": "https://ruglerugle.github.io/complex-quest/stage7.html"
+      }
+    ]
+  }
+]
+</script>
 <style>
   .compound-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .compound-svg .bar{fill:#7ab1d8;stroke:#2f6fa6;stroke-width:1.2}
@@ -551,7 +593,7 @@
       </div>
 
       <div class="quiz-head">確認クイズ</div>
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q1. （1＋1/n）ⁿ は、n を大きくしていくとどの値に近づく？</p>
         <div class="choice-list">
           <button class="choice-btn">π ＝ 3.141…</button>
@@ -561,7 +603,7 @@
         <div class="quiz-explain" hidden>正解！ 利息を細かく刻んでも無限には増えず、e＝2.71828…という限界値に近づく。これが自然対数の底 e の定義のひとつだ。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q2. 関数 e^x の特徴として正しいのは？</p>
         <div class="choice-list">
           <button class="choice-btn">増える速さが、常に今の量とぴったり等しい</button>
@@ -571,7 +613,7 @@
         <div class="quiz-explain" hidden>正解！ 2^xなども「量に比例」して増えるけれど、速さが今の量とぴったり等しく（1倍に）なるのは e^x だけ。この性質が e^iθ の回転の話を支えている。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q3. θ を増やしていくと、e^iθ の点はガウス平面上でどう動く？</p>
         <div class="choice-list">
           <button class="choice-btn">実軸の上をまっすぐ進む</button>

@@ -25,6 +25,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "STAGE6 ド・モアブルの定理",
+    "description": "ド・モアブルの定理（cosθ+i sinθ)ⁿ=cos nθ+i sin nθ を「回転のくり返し」として理解し、zⁿ=1 の解（1のn乗根）が単位円の上に正n角形を描く美しさを目撃するステージ。",
+    "url": "https://ruglerugle.github.io/complex-quest/stage6.html",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "learningResourceType": "learning activity",
+    "educationalLevel": "高校生以上（意欲のある中学生も歓迎）",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "本当はおもしろい複素数の世界",
+      "url": "https://ruglerugle.github.io/complex-quest/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "ruglerugle"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "本当はおもしろい複素数の世界",
+        "item": "https://ruglerugle.github.io/complex-quest/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "STAGE6 ド・モアブルの定理",
+        "item": "https://ruglerugle.github.io/complex-quest/stage6.html"
+      }
+    ]
+  }
+]
+</script>
 <style>
   .penta-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .penta-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
@@ -156,7 +198,7 @@
       </div>
 
       <div class="quiz-head">確認クイズ</div>
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q1. （cos 30°＋i sin 30°）⁶ は？</p>
         <div class="choice-list">
           <button class="choice-btn">1</button>
@@ -166,7 +208,7 @@
         <div class="quiz-explain" hidden>正解！ 30度回転を6回＝180度回転。cos 180°＋i sin 180°＝−1＋0i＝−1。6乗の計算が「30×6＝180」だけで終わる。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="3">
         <p class="quiz-q">Q2. z⁴＝1 を満たす複素数 z（1の4乗根）は、全部でいくつある？</p>
         <div class="choice-list">
           <button class="choice-btn">1個</button>
@@ -176,7 +218,7 @@
         <div class="quiz-explain" hidden>正解！ 0°、90°、180°、270°の4つ、つまり 1、i、−1、−i。ステージ4で見た「×i の一周」のメンバーが勢ぞろいだ。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q3. 1の5乗根（z⁵＝1 の解）をガウス平面に全部描くと、何の形になる？</p>
         <div class="choice-list">
           <button class="choice-btn">正五角形</button>

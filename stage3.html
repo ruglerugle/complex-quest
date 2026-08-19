@@ -25,6 +25,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "STAGE3 ガウス平面",
+    "description": "複素数 a+bi をガウス平面（複素数平面）の点として見るステージ。実軸と虚軸、複素数の足し算が「矢印の継ぎ足し」に見える理由を図解で学ぶ。",
+    "url": "https://ruglerugle.github.io/complex-quest/stage3.html",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "learningResourceType": "learning activity",
+    "educationalLevel": "高校生以上（意欲のある中学生も歓迎）",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "本当はおもしろい複素数の世界",
+      "url": "https://ruglerugle.github.io/complex-quest/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "ruglerugle"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "本当はおもしろい複素数の世界",
+        "item": "https://ruglerugle.github.io/complex-quest/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "STAGE3 ガウス平面",
+        "item": "https://ruglerugle.github.io/complex-quest/stage3.html"
+      }
+    ]
+  }
+]
+</script>
 <style>
   .plane-svg .grid{stroke:var(--line);stroke-width:1}
   .plane-svg .axis{stroke:var(--ink);stroke-width:1.6}
@@ -184,7 +226,7 @@
       </div>
 
       <div class="quiz-head">確認クイズ</div>
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q1. 複素数 3＋2i は、ガウス平面のどの位置にある？</p>
         <div class="choice-list">
           <button class="choice-btn">右に3、上に2 の点</button>
@@ -194,7 +236,7 @@
         <div class="quiz-explain" hidden>正解！ 実部3が「右にいくつ」、虚部2が「上にいくつ」。座標の（3, 2）に対応する点だ。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q2. （3＋2i）＋（1＋i）は？</p>
         <div class="choice-list">
           <button class="choice-btn">4＋3i</button>
@@ -204,7 +246,7 @@
         <div class="quiz-explain" hidden>正解！ 実部どうし（3＋1）、虚部どうし（2＋1）を足せばいい。平面の上では点が右に1・上に1だけ引っ越す。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q3. 虚軸の上（原点以外）にある点は、どんな数？</p>
         <div class="choice-list">
           <button class="choice-btn">実数</button>

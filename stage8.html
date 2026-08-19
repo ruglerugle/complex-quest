@@ -25,6 +25,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "STAGE8 オイラーの等式 e^iπ＋1＝0",
+    "description": "オイラーの公式 e^iθ=cosθ+i sinθ にθ=πを入れると、e^iπ+1=0。0、1、i、e、π――別々の場所で生まれた5つの数がひとつの式で出会う「世界一美しい式」にたどり着く最終ステージ。",
+    "url": "https://ruglerugle.github.io/complex-quest/stage8.html",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "learningResourceType": "learning activity",
+    "educationalLevel": "高校生以上（意欲のある中学生も歓迎）",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "本当はおもしろい複素数の世界",
+      "url": "https://ruglerugle.github.io/complex-quest/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "ruglerugle"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "本当はおもしろい複素数の世界",
+        "item": "https://ruglerugle.github.io/complex-quest/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "STAGE8 オイラーの等式 e^iπ＋1＝0",
+        "item": "https://ruglerugle.github.io/complex-quest/stage8.html"
+      }
+    ]
+  }
+]
+</script>
 <style>
   .euler-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .euler-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
@@ -294,7 +336,7 @@
       </div>
 
       <div class="quiz-head">確認クイズ</div>
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="3">
         <p class="quiz-q">Q1. e^iπ は？</p>
         <div class="choice-list">
           <button class="choice-btn">1</button>
@@ -304,7 +346,7 @@
         <div class="quiz-explain" hidden>正解！ 1から単位円を半周（弧の長さπ）歩くと−1に着く。だから e^iπ＝−1、移項して e^iπ＋1＝0。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q2. では e^(iπ/2)（4分の1周）は？</p>
         <div class="choice-list">
           <button class="choice-btn">i</button>
@@ -314,7 +356,7 @@
         <div class="quiz-explain" hidden>正解！ 1から4分の1周（90度）回ると虚軸の上、つまり i。ステージ4の「×i＝90度回転」とぴったりつながる。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q3. オイラーの等式 e^iπ＋1＝0 に<strong>登場しない</strong>数は？</p>
         <div class="choice-list">
           <button class="choice-btn">0</button>

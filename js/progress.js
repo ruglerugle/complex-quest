@@ -13,18 +13,6 @@
     url: "https://www.amazon.co.jp/dp/4486014855?tag=senjin-22"
   };
 
-  // 各ステージのクイズ正解（クイズカードの出現順に、正解の選択肢のインデックス）
-  var ANSWERS = {
-    1: [1, 1, 1],
-    2: [1, 2, 0],
-    3: [0, 0, 1],
-    4: [0, 2, 0],
-    5: [0, 1, 0],
-    6: [1, 2, 0],
-    7: [1, 0, 1],
-    8: [2, 0, 1]
-  };
-
   var STAGES = [
     { n: 1, file: "stage1.html", title: "数直線からはみ出した数", sub: "「2乗して−1」の謎" },
     { n: 2, file: "stage2.html", title: "虚数単位 i の誕生", sub: "「想像上の数」と呼ばれた数の歴史" },
@@ -120,9 +108,10 @@
   }
 
   function initQuiz(stageNum, onAllSolved) {
-    var answers = ANSWERS[stageNum] || [];
     var cards = document.querySelectorAll(".quiz-card[data-quiz]");
     cards.forEach(function (card, cardIndex) {
+      // 正解はカード自身の data-answer 属性（1始まり）で持つ
+      var answer = parseInt(card.getAttribute("data-answer"), 10);
       var live = document.createElement("p");
       live.className = "sr-only";
       live.setAttribute("aria-live", "polite");
@@ -131,7 +120,7 @@
       buttons.forEach(function (btn, btnIndex) {
         btn.addEventListener("click", function () {
           if (card.getAttribute("data-solved") === "true") return;
-          var correct = answers[cardIndex] === btnIndex;
+          var correct = answer === btnIndex + 1;
           live.textContent = correct ? "正解です" : "不正解です。もう一度選んでください";
           if (correct) {
             buttons.forEach(function (b) { b.disabled = true; });

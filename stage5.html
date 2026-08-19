@@ -25,6 +25,48 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="stylesheet" href="design-system.css">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "name": "STAGE5 長さと角度で表す",
+    "description": "複素数の絶対値と偏角。三平方の定理で長さを求め、複素数を「長さと角度」の極形式で表すと、掛け算が「長さは掛け算・角度は足し算」というシンプルなルールになることを学ぶステージ。",
+    "url": "https://ruglerugle.github.io/complex-quest/stage5.html",
+    "inLanguage": "ja",
+    "isAccessibleForFree": true,
+    "learningResourceType": "learning activity",
+    "educationalLevel": "高校生以上（意欲のある中学生も歓迎）",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "本当はおもしろい複素数の世界",
+      "url": "https://ruglerugle.github.io/complex-quest/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "ruglerugle"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "本当はおもしろい複素数の世界",
+        "item": "https://ruglerugle.github.io/complex-quest/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "STAGE5 長さと角度で表す",
+        "item": "https://ruglerugle.github.io/complex-quest/stage5.html"
+      }
+    ]
+  }
+]
+</script>
 <style>
   .polar-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .polar-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
@@ -180,7 +222,7 @@
       </div>
 
       <div class="quiz-head">確認クイズ</div>
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q1. |3＋4i|（3＋4i の絶対値）は？</p>
         <div class="choice-list">
           <button class="choice-btn">5</button>
@@ -190,7 +232,7 @@
         <div class="quiz-explain" hidden>正解！ √(3²＋4²)＝√25＝5。有名な「3:4:5」の直角三角形だ。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="2">
         <p class="quiz-q">Q2. 複素数どうしを掛け算すると、偏角（角度）はどうなる？</p>
         <div class="choice-list">
           <button class="choice-btn">掛け算される</button>
@@ -200,7 +242,7 @@
         <div class="quiz-explain" hidden>正解！ 「長さは掛け算、角度は足し算」。掛け算が回転になる理由はここにある。</div>
       </div>
 
-      <div class="quiz-card" data-quiz>
+      <div class="quiz-card" data-quiz data-answer="1">
         <p class="quiz-q">Q3. （1＋i）² は？</p>
         <div class="choice-list">
           <button class="choice-btn">2i</button>
