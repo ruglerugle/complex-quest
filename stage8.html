@@ -243,6 +243,42 @@
       <div class="dialogue-scene">
         <div class="dialog-row right">
           <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">もうひとつ気になります。角度をラジアンじゃなくて、慣れている「度」で書いたら、この式はどうなるんですか？</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">やってみよう。1度は π/180 ラジアンだから、角度 d 度なら <strong>e^(i×d×π/180)＝cos d°＋i sin d°</strong>。ここに d＝180 を入れると……180 が約分されて、結局 e^iπ に戻ってしまう。<strong>π は消せない</strong>んだ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">じゃあ、どうしても度数だけで書きたいなら……「1度だけ回る複素数」ζ＝cos 1°＋i sin 1° ≈ 0.99985＋0.01745i を用意して、<strong>ζ¹⁸⁰＋1＝0</strong>……。正しいはずなのに、なんだか、ありがたみが減りますね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">正しい式だが、無粋だね。底は説明の要る中途半端な数になり、「180」は古代バビロニアの60進法に由来する<strong>ただの人間の取り決め</strong>で、e も π も式から消えてしまう。0、1、i、e、π が一堂に会する美しさは、<strong>「角度を弧の長さで測る」というラジアンの約束</strong>――自然にとっていちばん素直な測り方――があってこそ、なんだ。</div>
+        </div>
+      </div>
+
+      <div class="formula-box">
+        <span class="step">度数で書くと：e^(i×d×π/180) ＝ cos d°＋i sin d°　→　d＝180 では 180 が約分され、e^iπ に戻る（πは消せない）</span>
+        <span class="step">無理やり度数版：ζ ＝ cos 1°＋i sin 1° ≈ 0.99985＋0.01745i として　ζ¹⁸⁰＋1＝0　……正しいが、e も π も消えてしまう</span>
+      </div>
+
+      <div class="dialogue-scene">
+        <div class="dialog-row right">
+          <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
