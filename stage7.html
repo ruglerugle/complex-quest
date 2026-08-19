@@ -51,6 +51,18 @@
   .exp-svg .ln-ten{fill:none;stroke:#2f8f65;stroke-width:2.5}
   .exp-svg .curve-label{font-size:12px;font-weight:900}
   .exp-svg .lg{font-size:10.5px;font-weight:800}
+  .zoom-svg .axis{stroke:var(--ink);stroke-width:1.5}
+  .zoom-svg .tick-label{fill:var(--muted);font-size:10.5px;font-weight:700}
+  .zoom-svg .ttl{fill:var(--ink);font-size:12px;font-weight:900}
+  .zoom-svg .note{fill:var(--muted);font-size:10.5px;font-weight:700}
+  .zoom-svg .ln-two{fill:none;stroke:#2f6fa6;stroke-width:2.5}
+  .zoom-svg .ln-e{fill:none;stroke:var(--gold-dark);stroke-width:3}
+  .zoom-svg .ln-ten{fill:none;stroke:#2f8f65;stroke-width:2.5}
+  .zoom-svg .tg-two{stroke:#2f6fa6;stroke-width:1.6;stroke-dasharray:5 4;opacity:.75}
+  .zoom-svg .tg-e{stroke:var(--gold-dark);stroke-width:1.6;stroke-dasharray:5 4;opacity:.75}
+  .zoom-svg .tg-ten{stroke:#2f8f65;stroke-width:1.6;stroke-dasharray:5 4;opacity:.75}
+  .zoom-svg .slope-label{font-size:11px;font-weight:850}
+  .zoom-svg .curve-label{font-size:12px;font-weight:900}
   .circle-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .circle-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
   .circle-svg .circle{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 4}
@@ -311,6 +323,35 @@
           </g>
         </svg>
         <div class="diagram-caption">3本ともスタートは同じ1で、「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が 0.69＜1＜2.3 の順に、立ち上がりが急になる。e^x はその真ん中、定数ちょうど1の基準カーブ</div>
+      </div>
+
+      <div class="diagram-box">
+        <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.1）の拡大図。3本の曲線はほぼ直線で、その傾きがちょうど0.69、1、2.3になっている">
+          <line class="axis" x1="70" y1="250" x2="425" y2="250"></line>
+          <polygon points="425,250 416,245 416,255" fill="var(--ink)"></polygon>
+          <line class="axis" x1="70" y1="272" x2="70" y2="20"></line>
+          <polygon points="70,20 65,29 75,29" fill="var(--ink)"></polygon>
+          <text class="ttl" x="78" y="32">スタート付近を拡大（0 ≤ x ≤ 0.1）</text>
+          <text class="note" x="78" y="50">点線 ＝ 最初の傾きのまま、まっすぐ進んだ場合</text>
+          <text class="tick-label" x="70" y="266" text-anchor="middle">0</text>
+          <text class="tick-label" x="400" y="266" text-anchor="middle">0.1</text>
+          <text class="tick-label" x="62" y="254" text-anchor="end">1</text>
+          <!-- 傾きの点線（初速の直線）：y = 1 + 定数×x -->
+          <line class="tg-ten" x1="70" y1="250" x2="400" y2="81.3"></line>
+          <line class="tg-e" x1="70" y1="250" x2="400" y2="176.7"></line>
+          <line class="tg-two" x1="70" y1="250" x2="400" y2="199.4"></line>
+          <text class="slope-label" x="404" y="85" style="fill:#2f8f65">傾き 2.3</text>
+          <text class="slope-label" x="404" y="181" style="fill:var(--gold-dark)">傾き 1</text>
+          <text class="slope-label" x="404" y="204" style="fill:#2f6fa6">傾き 0.69</text>
+          <!-- 曲線本体 -->
+          <polyline class="ln-ten" points="70,250 136,215.5 202,179.2 268,141.3 334,101.7 400,60.1"></polyline>
+          <polyline class="ln-e" points="70,250 136,235.2 202,220.1 268,204.7 334,188.9 400,172.9"></polyline>
+          <polyline class="ln-two" points="70,250 136,239.8 202,229.4 268,218.9 334,208.2 400,197.4"></polyline>
+          <text class="curve-label" x="250" y="125" style="fill:#2f8f65">10^x</text>
+          <text class="curve-label" x="336" y="176" style="fill:var(--gold-dark)">e^x</text>
+          <text class="curve-label" x="336" y="228" style="fill:#2f6fa6">2^x</text>
+        </svg>
+        <div class="diagram-caption">スタート付近を拡大すると3本はほぼ直線で、その傾き（点線）がちょうど 0.69・1・2.3。さっき電卓で出てきた定数は「スタート地点での曲線の傾き」だったのだ。曲線が点線から少しずつ上へ離れていくのは、量が増えるにつれ増えるペース自体も速くなっていくから</div>
       </div>
 
       <div class="dialogue-scene">
