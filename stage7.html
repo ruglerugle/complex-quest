@@ -63,6 +63,8 @@
   .zoom-svg .tg-ten{stroke:#2f8f65;stroke-width:1.6;stroke-dasharray:5 4;opacity:.75}
   .zoom-svg .slope-label{font-size:11px;font-weight:850}
   .zoom-svg .curve-label{font-size:12px;font-weight:900}
+  .zoom-svg .plot-frame{fill:none;stroke:var(--line);stroke-width:1.2}
+  .zoom-svg .base-line{stroke:var(--line);stroke-width:1;stroke-dasharray:4 4}
   .dual-graph{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;justify-content:center}
   .dual-graph svg{flex:1 1 300px;min-width:270px;max-width:460px}
   .circle-svg .axis{stroke:var(--ink);stroke-width:1.5}
@@ -295,61 +297,63 @@
 
       <div class="diagram-box">
         <div class="dual-graph">
-        <svg class="exp-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="2^x、e^x、10^x のグラフ（縦横同じ目盛り）。3本ともスタートは1で、定数0.69、1、2.3の順に立ち上がりが急になる">
-          <line class="axis" x1="96" y1="260" x2="348" y2="260"></line>
-          <polygon points="348,260 339,255 339,265" fill="var(--ink)"></polygon>
-          <line class="axis" x1="110" y1="276" x2="110" y2="30"></line>
-          <polygon points="110,30 105,39 115,39" fill="var(--ink)"></polygon>
-          <text class="axis-label" x="342" y="278">x</text>
-          <text class="axis-label" x="96" y="38" text-anchor="end">量</text>
-          <text class="tick-label" x="110" y="276" text-anchor="middle">0</text>
-          <text class="tick-label" x="220" y="276" text-anchor="middle">1</text>
-          <text class="tick-label" x="330" y="276" text-anchor="middle">2</text>
-          <text class="tick-label" x="102" y="264" text-anchor="end">1</text>
-          <text class="tick-label" x="102" y="154" text-anchor="end">2</text>
-          <text class="tick-label" x="102" y="44" text-anchor="end">3</text>
-          <!-- 縦横とも 1単位＝110px の等倍目盛り。各曲線は量3で上端から抜ける -->
-          <polyline class="ln-ten" points="110,260 121,231.5 132,195.7 143,150.6 154,93.7 162.5,40"></polyline>
-          <text class="curve-label" x="140" y="30" style="fill:#2f8f65">10^x</text>
-          <polyline class="ln-e" points="110,260 132,235.7 154,205.9 176,169.6 198,125.1 220,71 230.9,40"></polyline>
-          <text class="curve-label" x="212" y="30" style="fill:var(--gold-dark)">e^x</text>
-          <polyline class="ln-two" points="110,260 137.5,239.2 165,214.5 192.5,185 220,150 247.5,108.4 284.4,40"></polyline>
-          <text class="curve-label" x="272" y="30" style="fill:#2f6fa6">2^x</text>
-          <!-- 凡例 -->
+        <svg class="exp-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="2^x、e^x、10^x のグラフ。xがマイナスの側では高さ0に近づき、x=0で3本とも高さ1を通り、定数0.69、1、2.3の順に急な坂で立ち上がる">
+          <line class="axis" x1="60" y1="270" x2="400" y2="270"></line>
+          <polygon points="400,270 391,265 391,275" fill="var(--ink)"></polygon>
+          <line class="axis" x1="230" y1="286" x2="230" y2="20"></line>
+          <polygon points="230,20 225,29 235,29" fill="var(--ink)"></polygon>
+          <text class="axis-label" x="406" y="288">x</text>
+          <text class="axis-label" x="218" y="14" text-anchor="end">量</text>
+          <text class="tick-label" x="222" y="284" text-anchor="end">0</text>
+          <text class="tick-label" x="70" y="284" text-anchor="middle">−2</text>
+          <text class="tick-label" x="150" y="284" text-anchor="middle">−1</text>
+          <text class="tick-label" x="310" y="284" text-anchor="middle">1</text>
+          <text class="tick-label" x="390" y="284" text-anchor="middle">2</text>
+          <text class="tick-label" x="222" y="194" text-anchor="end">1</text>
+          <text class="tick-label" x="222" y="114" text-anchor="end">2</text>
+          <text class="tick-label" x="222" y="34" text-anchor="end">3</text>
+          <line class="base-line" x1="70" y1="190" x2="390" y2="190"></line>
+          <polyline class="ln-ten" points="70,269.2 110,267.5 150,262 190,244.7 210,225 230,190 250,127.7 268.2,30"></polyline>
+          <text class="curve-label" x="252" y="20" style="fill:#2f8f65">10^x</text>
+          <polyline class="ln-e" points="70,259.2 110,252.2 150,240.6 190,221.5 230,190 262,150.6 294,91.9 317.9,30"></polyline>
+          <text class="curve-label" x="304" y="20" style="fill:var(--gold-dark)">e^x</text>
+          <polyline class="ln-two" points="70,250 110,241.7 150,230 190,213.4 230,190 270,156.9 310,110 338,66.1 356.8,30"></polyline>
+          <text class="curve-label" x="348" y="20" style="fill:#2f6fa6">2^x</text>
+          <!-- 凡例（左上の空きスペース） -->
           <g>
-            <text class="lg" x="344" y="110" style="fill:#2f8f65">10^x（定数 2.3）</text>
-            <text class="lg" x="344" y="132" style="fill:var(--gold-dark)">e^x（定数 1）</text>
-            <text class="lg" x="344" y="154" style="fill:#2f6fa6">2^x（定数 0.69）</text>
+            <text class="lg" x="80" y="60" style="fill:#2f8f65">10^x（定数 2.3）</text>
+            <text class="lg" x="80" y="82" style="fill:var(--gold-dark)">e^x（定数 1）</text>
+            <text class="lg" x="80" y="104" style="fill:#2f6fa6">2^x（定数 0.69）</text>
           </g>
         </svg>
-        <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.3）を縦横同じ目盛りで拡大した図。傾き1の点線はちょうど45度で、3本の曲線の出だしの傾きが0.69、1、2.3になっていることが見える">
-          <text class="ttl" x="78" y="26">スタート付近を拡大</text>
-          <text class="note" x="78" y="44">点線 ＝ 出だしの傾きのまま、まっすぐ進んだ直線</text>
-          <line class="axis" x1="106" y1="280" x2="420" y2="280"></line>
-          <polygon points="420,280 411,275 411,285" fill="var(--ink)"></polygon>
-          <line class="axis" x1="120" y1="296" x2="120" y2="52"></line>
-          <polygon points="120,52 115,61 125,61" fill="var(--ink)"></polygon>
-          <text class="tick-label" x="120" y="294" text-anchor="end" dx="-6">0</text>
+        <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="x=0付近を拡大した図。3本の曲線はどれもx=0で高さ1を通り、そこでの坂の急さ（傾き）が0.69、1、2.3になっている。傾き1の点線はちょうど45度">
+          <text class="ttl" x="78" y="26">x＝0 付近を拡大</text>
+          <rect class="plot-frame" x="120" y="60" width="220" height="220"></rect>
+          <line class="axis" x1="193.3" y1="290" x2="193.3" y2="50"></line>
+          <polygon points="193.3,50 188.3,59 198.3,59" fill="var(--ink)"></polygon>
+          <line class="base-line" x1="120" y1="206.7" x2="340" y2="206.7"></line>
+          <text class="tick-label" x="114" y="210" text-anchor="end">1</text>
+          <text class="tick-label" x="114" y="64" text-anchor="end">1.3</text>
+          <text class="tick-label" x="120" y="294" text-anchor="middle">−0.15</text>
+          <text class="tick-label" x="193.3" y="294" text-anchor="middle">0</text>
           <text class="tick-label" x="340" y="294" text-anchor="middle">0.3</text>
-          <text class="tick-label" x="112" y="270" text-anchor="end">1</text>
-          <text class="tick-label" x="112" y="64" text-anchor="end">1.3</text>
-          <!-- 傾きの点線（初速の直線）：y = 1 + 定数×x（縦横等倍なので傾き1＝45°） -->
-          <line class="tg-ten" x1="120" y1="280" x2="215.6" y2="60"></line>
+          <!-- 傾きの点線：x=0 の点（高さ1）を通る、傾き0.69・1・2.3の直線 -->
+          <line class="tg-ten" x1="161.4" y1="280" x2="257.1" y2="60"></line>
           <line class="tg-e" x1="120" y1="280" x2="340" y2="60"></line>
-          <line class="tg-two" x1="120" y1="280" x2="340" y2="128.2"></line>
-          <text class="slope-label" x="216" y="84" style="fill:#2f8f65">傾き 2.3</text>
+          <line class="tg-two" x1="120" y1="257.3" x2="340" y2="105.5"></line>
+          <text class="slope-label" x="236" y="56" style="fill:#2f8f65">傾き 2.3</text>
           <text class="slope-label" x="346" y="64" style="fill:var(--gold-dark)">傾き 1（45°）</text>
-          <text class="slope-label" x="346" y="132" style="fill:#2f6fa6">傾き 0.69</text>
+          <text class="slope-label" x="346" y="109" style="fill:#2f6fa6">傾き 0.69</text>
           <!-- 曲線本体 -->
-          <polyline class="ln-ten" points="120,280 138.3,236.5 156.7,190.5 175,141.8 193.3,90.2 203.5,60"></polyline>
-          <polyline class="ln-e" points="120,280 156.7,242.4 193.3,202.9 230,161.4 266.7,117.6 303.3,71.4 312.4,60"></polyline>
-          <polyline class="ln-two" points="120,280 156.7,254.1 193.3,227.4 230,199.6 266.7,170.9 303.3,141.3 340,110.5"></polyline>
-          <text class="curve-label" x="138" y="88" style="fill:#2f8f65">10^x</text>
-          <text class="curve-label" x="240" y="108" style="fill:var(--gold-dark)">e^x</text>
-          <text class="curve-label" x="346" y="110" style="fill:#2f6fa6">2^x</text>
+          <polyline class="ln-ten" points="158.8,280 176.2,244.5 193.3,206.7 217.8,147 242.2,80.1 249,60"></polyline>
+          <polyline class="ln-e" points="120,274.7 156.7,242 193.3,206.7 230,168.6 266.7,127.6 303.3,83.3 321.6,60"></polyline>
+          <polyline class="ln-two" points="120,254.9 156.7,231.5 193.3,206.7 230,180.6 266.7,153.1 303.3,124.2 340,93.7"></polyline>
+          <text class="curve-label" x="218" y="40" style="fill:#2f8f65">10^x</text>
+          <text class="curve-label" x="298" y="40" style="fill:var(--gold-dark)">e^x</text>
+          <text class="curve-label" x="346" y="89" style="fill:#2f6fa6">2^x</text>
         </svg>
         </div>
-        <div class="diagram-caption">1枚目：3本ともスタートは同じ1で、同じ「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が大きいほど、急な坂で立ち上がる。2枚目：スタート付近の拡大図。e^x の出だしは、横に1進むと縦に1増える<strong>ちょうど45°の坂（傾き1）</strong>。2^x はそれよりゆるい傾き0.69、10^x はずっと急な傾き2.3で、電卓で出てきた定数の正体は<strong>「スタート地点での坂の急さ」</strong>だったのだ。曲線が点線の坂から上へ離れていくのは、量が増えるほど、増えるペース自体も速くなっていくから</div>
+        <div class="diagram-caption">1枚目：どの指数関数も、xがマイナスの側では高さ0に限りなく近づき、x＝0でちょうど高さ1を通る。同じ「量に比例して増える」カーブ仲間で、定数（＝連続複利の年利）が大きいほど急な坂で立ち上がる。2枚目：x＝0付近の拡大図。点線は「x＝0 での傾きのまま、まっすぐ進んだ場合」の直線。e^x の出だしは、横に1進むと縦に1増える<strong>ちょうど45°の坂（傾き1）</strong>。2^x はそれよりゆるい傾き0.69、10^x はずっと急な傾き2.3で、電卓で出てきた定数の正体は<strong>「スタート地点での坂の急さ」</strong>だったのだ。曲線が点線の坂から上へ離れていくのは、量が増えるほど、増えるペース自体も速くなっていくから</div>
       </div>
 
       <div class="dialogue-scene">
