@@ -15,7 +15,7 @@
 
   // 各ステージのクイズ正解（クイズカードの出現順に、正解の選択肢のインデックス）
   var ANSWERS = {
-    1: [1, 1],
+    1: [1, 1, 1],
     2: [1, 2, 0],
     3: [0, 0, 1],
     4: [0, 2, 0],
@@ -282,6 +282,11 @@
         if (!isUnlocked(n, cleared)) {
           card.classList.add("locked");
           card.removeAttribute("href");
+          card.setAttribute("aria-disabled", "true");
+          var note = document.createElement("span");
+          note.className = "sr-only";
+          note.textContent = "（ロック中：前のステージをクリアすると解放されます）";
+          card.appendChild(note);
         }
         if (cleared.indexOf(n) !== -1) {
           card.classList.add("cleared");
