@@ -16,6 +16,20 @@
 <title>ページが見つかりません ― 本当はおもしろい複素数の世界</title>
 <link rel="icon" type="image/png" href="https://complex-number.habatakijuku.com/images/favicon.png">
 <link rel="stylesheet" href="https://complex-number.habatakijuku.com/design-system.css">
+<style>
+  .sister-cards{display:grid;gap:14px;max-width:620px;margin:18px auto 0}
+  .sister-card{display:flex;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);transition:box-shadow .15s,transform .15s}
+  .sister-card:hover,.sister-card:focus-visible{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.14)}
+  .sister-card img{width:180px;min-width:180px;height:auto;display:block}
+  .sister-card-body{display:flex;flex-direction:column;gap:5px;padding:12px 14px;min-width:0}
+  .sister-card-title{font-weight:900;font-size:14.5px;line-height:1.45}
+  .sister-card-desc{font-size:12px;color:var(--muted);line-height:1.6}
+  .sister-card-domain{font-size:11px;color:var(--muted)}
+  @media (max-width:560px){
+    .sister-card{flex-direction:column;align-items:stretch}
+    .sister-card img{width:100%;min-width:0}
+  }
+</style>
 </head>
 <body>
 <div class="shell">
@@ -42,9 +56,23 @@
       <div class="board-head" style="margin-top:32px">
         <div><h2>ほかの学習ゲームもどうぞ</h2></div>
       </div>
-      <div class="complete-actions">
-        <a class="btn" href="https://special-relativity.habatakijuku.com/">🌌 中学数学で読み解く特殊相対性理論</a>
-        <a class="btn" href="https://gamblers-mathematics.habatakijuku.com/poker/">♠ ギャンブラーのための数学（ポーカー編）</a>
+      <div class="sister-cards">
+        <a class="sister-card" href="https://special-relativity.habatakijuku.com/">
+          <img src="https://special-relativity.habatakijuku.com/images/ogp.png" alt="" width="1200" height="630" loading="lazy">
+          <span class="sister-card-body">
+            <span class="sister-card-title">中学数学で読み解く特殊相対性理論 ― 全8ステージの無料学習ゲーム</span>
+            <span class="sister-card-desc">中学数学・理科の知識だけで、特殊相対性理論を8つのステージで学べる無料の学習サイト。</span>
+            <span class="sister-card-domain">special-relativity.habatakijuku.com</span>
+          </span>
+        </a>
+        <a class="sister-card" href="https://gamblers-mathematics.habatakijuku.com/poker/">
+          <img src="https://gamblers-mathematics.habatakijuku.com/poker/images/ogp.png" alt="" width="1200" height="630" loading="lazy">
+          <span class="sister-card-body">
+            <span class="sister-card-title">ギャンブラーのための数学（ポーカー編）― POKER QUEST ―</span>
+            <span class="sister-card-desc">役の見分け方から実戦の駆け引き、世界大会への挑戦まで。テキサスホールデムを4つのクエストで学べる無料ブラウザ学習ゲーム。</span>
+            <span class="sister-card-domain">gamblers-mathematics.habatakijuku.com</span>
+          </span>
+        </a>
       </div>
     </section>
   </main>
