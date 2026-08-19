@@ -164,7 +164,7 @@
 
       <div class="mission-box">
         <div class="mission-label">🎯 ミッション</div>
-        <div class="mission-text">利息の計算から e＝2.718… が生まれる様子を見て、「e^iθ ＝ 単位円の上を回る点」という直感を手に入れよう。</div>
+        <div class="mission-text">利息の計算から e＝2.718… が生まれる様子を見て、「e<sup>iθ</sup> ＝ 単位円の上を回る点」という直感を手に入れよう。</div>
         <span class="mission-status" id="mission-status">未達成</span>
       </div>
 
@@ -242,7 +242,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">いま出てきた、限界まで細かく刻んで<strong>毎瞬間・切れ目なく利息を付け続ける方式</strong>には、<strong>連続複利</strong>という名前が付いている。残高が時間とともにどう動くかをグラフにするとよくわかるよ。年1回なら、1年の終わりにポンと2倍になる<strong>階段</strong>。半年ごとなら2段の階段、毎月なら12段。刻みを細かくするほど階段は細かくなめらかになって、最後には<strong>つるんとした1本の曲線</strong>に行き着く。この曲線こそが e^x だよ。</div>
+          <div class="dialog-bubble">いま出てきた、限界まで細かく刻んで<strong>毎瞬間・切れ目なく利息を付け続ける方式</strong>には、<strong>連続複利</strong>という名前が付いている。残高が時間とともにどう動くかをグラフにするとよくわかるよ。年1回なら、1年の終わりにポンと2倍になる<strong>階段</strong>。半年ごとなら2段の階段、毎月なら12段。刻みを細かくするほど階段は細かくなめらかになって、最後には<strong>つるんとした1本の曲線</strong>に行き着く。この曲線こそが e<sup>x</sup> だよ。</div>
         </div>
       </div>
 
@@ -277,10 +277,10 @@
             <line class="ln-year" x1="86" y1="52" x2="116" y2="52"></line><text class="lg" x="122" y="56" style="fill:#8a7a5c">年1回</text>
             <line class="ln-half" x1="86" y1="72" x2="116" y2="72"></line><text class="lg" x="122" y="76" style="fill:#2f6fa6">半年ごと</text>
             <line class="ln-month" x1="86" y1="92" x2="116" y2="92"></line><text class="lg" x="122" y="96" style="fill:#2f8f65">毎月</text>
-            <line class="ln-cont" x1="86" y1="112" x2="116" y2="112"></line><text class="lg" x="122" y="116" style="fill:var(--gold-dark)">連続複利 ＝ e^x</text>
+            <line class="ln-cont" x1="86" y1="112" x2="116" y2="112"></line><text class="lg" x="122" y="116" style="fill:var(--gold-dark)">連続複利 ＝ e<tspan dy="-3" font-size="8">x</tspan></text>
           </g>
         </svg>
-        <div class="diagram-caption">利息を付ける刻みを細かくすると、残高の階段はなめらかになっていき、「毎瞬間つき続ける」連続複利では1本のなめらかな曲線 e^x になる</div>
+        <div class="diagram-caption">利息を付ける刻みを細かくすると、残高の階段はなめらかになっていき、「毎瞬間つき続ける」連続複利では1本のなめらかな曲線 e<sup>x</sup> になる</div>
       </div>
 
       <div class="dialogue-scene">
@@ -289,7 +289,7 @@
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble">本当だ、階段がどんどん曲線に近づいていく……。e^x は「究極まで細かく利息がつき続ける預金残高のカーブ」のことだったんですね。</div>
+          <div class="dialog-bubble">本当だ、階段がどんどん曲線に近づいていく……。e<sup>x</sup> は「究極まで細かく利息がつき続ける預金残高のカーブ」のことだったんですね。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
@@ -310,14 +310,14 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">その通り。この「<strong>持っている量が多いほど、増えるペースも速い</strong>」――言い換えると「増える速さが、常に今の量に比例する」成長を、切れ目なく続けたものが関数 e^x なんだ。お金も細菌も人口も、ほうっておくと勝手に増えるものは、みんなこの形になる。</div>
+          <div class="dialog-bubble">その通り。この「<strong>持っている量が多いほど、増えるペースも速い</strong>」――言い換えると「増える速さが、常に今の量に比例する」成長を、切れ目なく続けたものが関数 e<sup>x</sup> なんだ。お金も細菌も人口も、ほうっておくと勝手に増えるものは、みんなこの形になる。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble">でも待ってください。「量に比例して増える」だけなら、2^x や 10^x でも同じですよね？ 2倍に育てば増えるペースも2倍。e だけの特徴ではない気がします。</div>
+          <div class="dialog-bubble">でも待ってください。「量に比例して増える」だけなら、2<sup>x</sup> や 10<sup>x</sup> でも同じですよね？ 2倍に育てば増えるペースも2倍。e だけの特徴ではない気がします。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
@@ -330,9 +330,9 @@
 
       <div class="formula-box">
         <span class="step">瞬間の増える速さ ＝（ごく短い時間に増えた量）÷（かかった時間）　……これを求める計算が「微分」</span>
-        <span class="step">e^0.001 ＝ 1.0010005…　→ 0.001 の間に、今の量の約 0.0010 倍増えた　→ 速さ ＝ 今の量 × <strong>1.0</strong></span>
-        <span class="step">2^0.001 ＝ 1.000693…　→ 0.001 の間に、今の量の約 0.00069 倍増えた　→ 速さ ＝ 今の量 × <strong>0.69</strong></span>
-        <span class="step">10^0.001 ＝ 1.002305…　→ 0.001 の間に、今の量の約 0.0023 倍増えた　→ 速さ ＝ 今の量 × <strong>2.3</strong></span>
+        <span class="step">e<sup>0.001</sup> ＝ 1.0010005…　→ 0.001 の間に、今の量の約 0.0010 倍増えた　→ 速さ ＝ 今の量 × <strong>1.0</strong></span>
+        <span class="step">2<sup>0.001</sup> ＝ 1.000693…　→ 0.001 の間に、今の量の約 0.00069 倍増えた　→ 速さ ＝ 今の量 × <strong>0.69</strong></span>
+        <span class="step">10<sup>0.001</sup> ＝ 1.002305…　→ 0.001 の間に、今の量の約 0.0023 倍増えた　→ 速さ ＝ 今の量 × <strong>2.3</strong></span>
       </div>
 
       <div class="dialogue-scene">
@@ -341,7 +341,7 @@
             <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble">本当だ……。どれも「増えた量 ＝ 今の量 × 定数 × 時間」の形になっていて、定数は 2^x なら 0.69、10^x なら 2.3。そして<strong>ぴったり 1 になるのが e^x</strong> なんですね。</div>
+          <div class="dialog-bubble">本当だ……。どれも「増えた量 ＝ 今の量 × 定数 × 時間」の形になっていて、定数は 2<sup>x</sup> なら 0.69、10<sup>x</sup> なら 2.3。そして<strong>ぴったり 1 になるのが e<sup>x</sup></strong> なんですね。</div>
         </div>
       </div>
 
@@ -364,16 +364,16 @@
           <text class="tick-label" x="222" y="34" text-anchor="end">3</text>
           <line class="base-line" x1="70" y1="190" x2="390" y2="190"></line>
           <polyline class="ln-ten" points="70.0,269.2 73.3,269.1 76.6,269.0 79.9,268.9 83.2,268.8 86.5,268.7 89.8,268.6 93.1,268.4 96.4,268.3 99.7,268.1 103.0,267.9 106.3,267.7 109.6,267.5 112.9,267.2 116.2,267.0 119.5,266.7 122.8,266.3 126.1,266.0 129.5,265.6 132.8,265.1 136.1,264.6 139.4,264.1 142.7,263.5 146.0,262.9 149.3,262.2 152.6,261.4 155.9,260.5 159.2,259.6 162.5,258.5 165.8,257.4 169.1,256.1 172.4,254.8 175.7,253.2 179.0,251.6 182.3,249.7 185.6,247.7 188.9,245.5 192.2,243.0 195.5,240.4 198.8,237.4 202.1,234.1 205.4,230.6 208.7,226.6 212.0,222.3 215.3,217.6 218.6,212.3 221.9,206.6 225.2,200.3 228.5,193.3 231.8,185.7 235.1,177.2 238.4,168.0 241.7,157.8 245.0,146.6 248.4,134.3 251.7,120.8 255.0,105.9 258.3,89.6 261.6,71.6 264.9,51.8 268.2,30.0"></polyline>
-          <text class="curve-label" x="252" y="20" style="fill:#2f8f65">10^x</text>
+          <text class="curve-label" x="252" y="20" style="fill:#2f8f65">10<tspan dy="-4" font-size="9">x</tspan></text>
           <polyline class="ln-e" points="70.0,259.2 74.1,258.6 78.3,258.0 82.4,257.4 86.5,256.7 90.7,256.0 94.8,255.2 98.9,254.5 103.1,253.6 107.2,252.8 111.3,251.9 115.4,250.9 119.6,249.9 123.7,248.8 127.8,247.7 132.0,246.5 136.1,245.3 140.2,244.0 144.4,242.6 148.5,241.1 152.6,239.6 156.8,238.0 160.9,236.3 165.0,234.5 169.2,232.6 173.3,230.6 177.4,228.5 181.6,226.3 185.7,224.0 189.8,221.6 193.9,219.0 198.1,216.3 202.2,213.5 206.3,210.5 210.5,207.3 214.6,204.0 218.7,200.5 222.9,196.8 227.0,192.9 231.1,188.9 235.3,184.6 239.4,180.0 243.5,175.3 247.7,170.2 251.8,165.0 255.9,159.4 260.0,153.5 264.2,147.4 268.3,140.9 272.4,134.0 276.6,126.8 280.7,119.2 284.8,111.2 289.0,102.8 293.1,93.9 297.2,84.6 301.4,74.8 305.5,64.4 309.6,53.6 313.8,42.1 317.9,30.0"></polyline>
-          <text class="curve-label" x="304" y="20" style="fill:var(--gold-dark)">e^x</text>
+          <text class="curve-label" x="304" y="20" style="fill:var(--gold-dark)">e<tspan dy="-4" font-size="9">x</tspan></text>
           <polyline class="ln-two" points="70.0,250.0 74.8,249.2 79.6,248.3 84.3,247.4 89.1,246.4 93.9,245.4 98.7,244.4 103.5,243.3 108.2,242.1 113.0,241.0 117.8,239.7 122.6,238.5 127.4,237.1 132.1,235.7 136.9,234.3 141.7,232.8 146.5,231.2 151.3,229.6 156.0,227.9 160.8,226.1 165.6,224.2 170.4,222.3 175.2,220.3 179.9,218.2 184.7,216.0 189.5,213.7 194.3,211.3 199.1,208.8 203.8,206.2 208.6,203.5 213.4,200.7 218.2,197.8 223.0,194.7 227.7,191.6 232.5,188.2 237.3,184.8 242.1,181.2 246.9,177.4 251.6,173.5 256.4,169.4 261.2,165.2 266.0,160.7 270.8,156.1 275.5,151.3 280.3,146.3 285.1,141.1 289.9,135.6 294.7,129.9 299.4,124.0 304.2,117.8 309.0,111.4 313.8,104.7 318.6,97.7 323.3,90.4 328.1,82.8 332.9,74.9 337.7,66.6 342.5,58.0 347.2,49.1 352.0,39.7 356.8,30.0"></polyline>
-          <text class="curve-label" x="348" y="20" style="fill:#2f6fa6">2^x</text>
+          <text class="curve-label" x="348" y="20" style="fill:#2f6fa6">2<tspan dy="-4" font-size="9">x</tspan></text>
           <!-- 凡例（左上の空きスペース） -->
           <g>
-            <text class="lg" x="80" y="60" style="fill:#2f8f65">10^x（定数 2.3）</text>
-            <text class="lg" x="80" y="82" style="fill:var(--gold-dark)">e^x（定数 1）</text>
-            <text class="lg" x="80" y="104" style="fill:#2f6fa6">2^x（定数 0.69）</text>
+            <text class="lg" x="80" y="60" style="fill:#2f8f65">10<tspan dy="-3" font-size="8">x</tspan><tspan dy="3">（定数 2.3）</tspan></text>
+            <text class="lg" x="80" y="82" style="fill:var(--gold-dark)">e<tspan dy="-3" font-size="8">x</tspan><tspan dy="3">（定数 1）</tspan></text>
+            <text class="lg" x="80" y="104" style="fill:#2f6fa6">2<tspan dy="-3" font-size="8">x</tspan><tspan dy="3">（定数 0.69）</tspan></text>
           </g>
         </svg>
         <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="x=0付近を拡大した図。3本の曲線はどれもx=0で高さ1を通り、そこでの坂の急さ（傾き）が0.69、1、2.3になっている。傾き1の点線はちょうど45度">
@@ -398,12 +398,12 @@
           <polyline class="ln-ten" points="158.8,280.0 161.0,275.6 163.3,271.1 165.6,266.5 167.8,262.0 170.1,257.3 172.3,252.7 174.6,247.9 176.8,243.1 179.1,238.3 181.3,233.4 183.6,228.5 185.9,223.5 188.1,218.5 190.4,213.4 192.6,208.2 194.9,203.0 197.1,197.8 199.4,192.4 201.6,187.1 203.9,181.6 206.2,176.2 208.4,170.6 210.7,165.0 212.9,159.3 215.2,153.6 217.4,147.8 219.7,142.0 221.9,136.1 224.2,130.1 226.5,124.0 228.7,117.9 231.0,111.8 233.2,105.5 235.5,99.2 237.7,92.9 240.0,86.4 242.2,79.9 244.5,73.4 246.8,66.7 249.0,60.0"></polyline>
           <polyline class="ln-e" points="120.0,274.8 125.0,270.4 130.0,266.0 135.1,261.5 140.1,257.0 145.2,252.5 150.2,247.9 155.2,243.3 160.3,238.6 165.3,233.9 170.4,229.1 175.4,224.2 180.4,219.4 185.5,214.4 190.5,209.4 195.6,204.4 200.6,199.3 205.6,194.2 210.7,189.0 215.7,183.7 220.8,178.4 225.8,173.1 230.8,167.6 235.9,162.2 240.9,156.6 246.0,151.1 251.0,145.4 256.0,139.7 261.1,134.0 266.1,128.1 271.2,122.3 276.2,116.3 281.2,110.3 286.3,104.2 291.3,98.1 296.4,91.9 301.4,85.7 306.4,79.4 311.5,73.0 316.5,66.5 321.6,60.0"></polyline>
           <polyline class="ln-two" points="120.0,254.9 126.4,250.9 132.9,246.8 139.3,242.7 145.8,238.5 152.3,234.3 158.7,230.1 165.2,225.8 171.6,221.4 178.1,217.1 184.6,212.7 191.0,208.2 197.5,203.8 203.9,199.2 210.4,194.7 216.9,190.1 223.3,185.4 229.8,180.7 236.2,176.0 242.7,171.2 249.2,166.4 255.6,161.5 262.1,156.6 268.5,151.6 275.0,146.6 281.5,141.6 287.9,136.5 294.4,131.3 300.8,126.1 307.3,120.9 313.8,115.6 320.2,110.3 326.7,104.9 333.1,99.5 339.6,94.0"></polyline>
-          <text class="curve-label" x="218" y="40" style="fill:#2f8f65">10^x</text>
-          <text class="curve-label" x="298" y="40" style="fill:var(--gold-dark)">e^x</text>
-          <text class="curve-label" x="346" y="89" style="fill:#2f6fa6">2^x</text>
+          <text class="curve-label" x="218" y="40" style="fill:#2f8f65">10<tspan dy="-4" font-size="9">x</tspan></text>
+          <text class="curve-label" x="298" y="40" style="fill:var(--gold-dark)">e<tspan dy="-4" font-size="9">x</tspan></text>
+          <text class="curve-label" x="346" y="89" style="fill:#2f6fa6">2<tspan dy="-4" font-size="9">x</tspan></text>
         </svg>
         </div>
-        <div class="diagram-caption">1枚目：どの指数関数も、xがマイナスの側では高さ0に限りなく近づき、x＝0でちょうど高さ1を通る。同じ「量に比例して増える」カーブ仲間で、定数（＝連続複利の年利）が大きいほど急な坂で立ち上がる。2枚目：x＝0付近の拡大図。点線は「x＝0 での傾きのまま、まっすぐ進んだ場合」の直線。e^x の出だしは、横に1進むと縦に1増える<strong>ちょうど45°の坂（傾き1）</strong>。2^x はそれよりゆるい傾き0.69、10^x はずっと急な傾き2.3で、電卓で出てきた定数の正体は<strong>「スタート地点での坂の急さ」</strong>だったのだ。曲線が点線の坂から上へ離れていくのは、量が増えるほど、増えるペース自体も速くなっていくから</div>
+        <div class="diagram-caption">1枚目：どの指数関数も、xがマイナスの側では高さ0に限りなく近づき、x＝0でちょうど高さ1を通る。同じ「量に比例して増える」カーブ仲間で、定数（＝連続複利の年利）が大きいほど急な坂で立ち上がる。2枚目：x＝0付近の拡大図。点線は「x＝0 での傾きのまま、まっすぐ進んだ場合」の直線。e<sup>x</sup> の出だしは、横に1進むと縦に1増える<strong>ちょうど45°の坂（傾き1）</strong>。2<sup>x</sup> はそれよりゆるい傾き0.69、10<sup>x</sup> はずっと急な傾き2.3で、電卓で出てきた定数の正体は<strong>「スタート地点での坂の急さ」</strong>だったのだ。曲線が点線の坂から上へ離れていくのは、量が増えるほど、増えるペース自体も速くなっていくから</div>
       </div>
 
       <div class="dialogue-scene">
@@ -412,14 +412,14 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">そういうこと。そしてこの定数の正体は、さっきグラフで見た<strong>連続複利の年利</strong>なんだ。e^x は<strong>年利100%の連続複利</strong>の残高曲線そのものだったね。同じ連続複利でも、年利を約69%に下げれば残高曲線は 2^x になり、約230%に上げれば 10^x になる。年利がちょうど100%――つまり<strong>増える速さが、今の量そのものと等しい</strong>のが e^x だよ。</div>
+          <div class="dialog-bubble">そういうこと。そしてこの定数の正体は、さっきグラフで見た<strong>連続複利の年利</strong>なんだ。e<sup>x</sup> は<strong>年利100%の連続複利</strong>の残高曲線そのものだったね。同じ連続複利でも、年利を約69%に下げれば残高曲線は 2<sup>x</sup> になり、約230%に上げれば 10<sup>x</sup> になる。年利がちょうど100%――つまり<strong>増える速さが、今の量そのものと等しい</strong>のが e<sup>x</sup> だよ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
             <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name student">うさ美</div>
           </div>
-          <div class="dialog-bubble">あれ、でも……それは当たり前ではないですか？ e はそもそも<strong>年利100%</strong>の連続複利から作った数です。「速さが今の量とぴったり等しくなる成長」の1年後の値に e と名前を付けたのだから、e^x の速さが今の量と等しいのは、発見というより<strong>最初からそう決めた約束</strong>のような……。</div>
+          <div class="dialog-bubble">あれ、でも……それは当たり前ではないですか？ e はそもそも<strong>年利100%</strong>の連続複利から作った数です。「速さが今の量とぴったり等しくなる成長」の1年後の値に e と名前を付けたのだから、e<sup>x</sup> の速さが今の量と等しいのは、発見というより<strong>最初からそう決めた約束</strong>のような……。</div>
         </div>
         <div class="dialog-row">
           <div class="dialog-character">
@@ -432,8 +432,8 @@
 
       <div class="formula-box">
         <span class="step">（1＋1/n）ⁿ は、n を大きくすると e＝2.71828… に近づく</span>
-        <span class="step">e^x ＝ 増える速さが、常に今の量と<strong>ぴったり等しい</strong>連続成長</span>
-        <span class="step">（増える速さ＝今の残高×利率。2^x は年利約69%、10^x は年利約230%に相当し、年利ちょうど100%＝「速さ＝今の量×1」になるのが e^x）</span>
+        <span class="step">e<sup>x</sup> ＝ 増える速さが、常に今の量と<strong>ぴったり等しい</strong>連続成長</span>
+        <span class="step">（増える速さ＝今の残高×利率。2<sup>x</sup> は年利約69%、10<sup>x</sup> は年利約230%に相当し、年利ちょうど100%＝「速さ＝今の量×1」になるのが e<sup>x</sup>）</span>
       </div>
 
       <div class="dialogue-scene">
@@ -456,7 +456,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">素晴らしい、そこを疑うのが正しい。素朴に「i回掛ける」と読んでも、たしかに意味はない。そこで数学者は、e^x を<strong>掛け算だけの形</strong>に書き直してから x に iθ を入れるんだ。連続複利を思い出そう。e^x は（1＋x/n）のn乗の、nを限りなく大きくしたもの――つまり<strong>「1＋ほんの少し」を莫大な回数、掛け合わせたもの</strong>だった。この形なら、xが虚数でも意味がはっきりする。<strong>e^iθ ＝（1＋iθ/n）を n回掛けたもの</strong>。ただの複素数の掛け算の繰り返しだから、これまでの道具がそのまま使えるよ。</div>
+          <div class="dialog-bubble">素晴らしい、そこを疑うのが正しい。素朴に「i回掛ける」と読んでも、たしかに意味はない。そこで数学者は、e<sup>x</sup> を<strong>掛け算だけの形</strong>に書き直してから x に iθ を入れるんだ。連続複利を思い出そう。e<sup>x</sup> は（1＋x/n）のn乗の、nを限りなく大きくしたもの――つまり<strong>「1＋ほんの少し」を莫大な回数、掛け合わせたもの</strong>だった。この形なら、xが虚数でも意味がはっきりする。<strong>e<sup>iθ</sup> ＝（1＋iθ/n）を n回掛けたもの</strong>。ただの複素数の掛け算の繰り返しだから、これまでの道具がそのまま使えるよ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -470,7 +470,7 @@
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">その通り。たとえば θ＝1、n＝1000 なら、（1＋0.001i）を掛けるたびに点は約0.001ずつ回り、1000回で合計およそ1回る。<strong>「i乗」の正体は、微小な回転の積み重ね</strong>なんだ。別の見方をすると、×（1＋0.001i）＝「今の量」＋「今の量×i×0.001」。一歩ごとに、<strong>今の量と同じ大きさのペースで、i の方向――自分から見て直角――へ</strong>進んでいる。e^x の「今の量に等しい速さで伸びる」成長が、i のせいで<strong>直角方向に曲げられた</strong>んだよ。</div>
+          <div class="dialog-bubble">その通り。たとえば θ＝1、n＝1000 なら、（1＋0.001i）を掛けるたびに点は約0.001ずつ回り、1000回で合計およそ1回る。<strong>「i乗」の正体は、微小な回転の積み重ね</strong>なんだ。別の見方をすると、×（1＋0.001i）＝「今の量」＋「今の量×i×0.001」。一歩ごとに、<strong>今の量と同じ大きさのペースで、i の方向――自分から見て直角――へ</strong>進んでいる。e<sup>x</sup> の「今の量に等しい速さで伸びる」成長が、i のせいで<strong>直角方向に曲げられた</strong>んだよ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -484,7 +484,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">その通り、ハンマー投げのイメージで完璧だ。順番に確かめよう。まず<strong>原点からの距離</strong>がなぜ変わらないか。そもそも「原点から遠ざかる」とは、ロープの向きに沿って<strong>外側へ</strong>動くことで、「近づく」とはロープに沿って<strong>内側へ</strong>動くことだね。ところが e^iθ の点の動きは、いつでもロープと<strong>直角</strong>。外向きにも内向きにも、まったく動いていない。コンパスで円を描くときと同じだよ――鉛筆の先はいつも腕と直角の向きに動くから、針からの距離（＝腕の長さ）は変わらない。</div>
+          <div class="dialog-bubble">その通り、ハンマー投げのイメージで完璧だ。順番に確かめよう。まず<strong>原点からの距離</strong>がなぜ変わらないか。そもそも「原点から遠ざかる」とは、ロープの向きに沿って<strong>外側へ</strong>動くことで、「近づく」とはロープに沿って<strong>内側へ</strong>動くことだね。ところが e<sup>iθ</sup> の点の動きは、いつでもロープと<strong>直角</strong>。外向きにも内向きにも、まったく動いていない。コンパスで円を描くときと同じだよ――鉛筆の先はいつも腕と直角の向きに動くから、針からの距離（＝腕の長さ）は変わらない。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -564,7 +564,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">そう。その約束の上で、さっき電卓で確かめた「e の増える速さは<strong>今の量とぴったり等しい</strong>（×1）」が効いてくる。今の量の大きさはずっと1のままだから、<strong>点が円周を進む速さも、ずっと1</strong>。速さ1で θ のあいだ進めば、歩いた道のりは 1×θ＝θ。つまり <strong>e^iθ は、単位円の上を弧の長さ θ――ラジアンで測った角度 θ――だけ回った点</strong>なんだ。半周歩けば、θ＝π だよ。</div>
+          <div class="dialog-bubble">そう。その約束の上で、さっき電卓で確かめた「e の増える速さは<strong>今の量とぴったり等しい</strong>（×1）」が効いてくる。今の量の大きさはずっと1のままだから、<strong>点が円周を進む速さも、ずっと1</strong>。速さ1で θ のあいだ進めば、歩いた道のりは 1×θ＝θ。つまり <strong>e<sup>iθ</sup> は、単位円の上を弧の長さ θ――ラジアンで測った角度 θ――だけ回った点</strong>なんだ。半周歩けば、θ＝π だよ。</div>
         </div>
       </div>
 
@@ -593,17 +593,17 @@
           <circle class="pt" cx="335" cy="160" r="5"></circle>
           <text class="axis-label" x="342" y="150">スタート（1）</text>
         </svg>
-        <div class="diagram-caption">e^iθ の点は、進む向きが常に「原点から見て直角」。だから長さ1のまま単位円を回り、θは回った弧の長さ（ラジアン）になる</div>
+        <div class="diagram-caption">e<sup>iθ</sup> の点は、進む向きが常に「原点から見て直角」。だから長さ1のまま単位円を回り、θは回った弧の長さ（ラジアン）になる</div>
       </div>
 
       <div class="formula-box">
-        <span class="step">i乗の意味：e^iθ ＝（1＋iθ/n）ⁿ（nは限りなく大きく）……「1＋微小×i」を掛け続ける ＝ 微小回転の積み重ね</span>
+        <span class="step">i乗の意味：e<sup>iθ</sup> ＝（1＋iθ/n）ⁿ（nは限りなく大きく）……「1＋微小×i」を掛け続ける ＝ 微小回転の積み重ね</span>
         <span class="step">「遠ざかる／近づく」＝ロープ方向の動き。直角の動きには、ロープ方向の成分がない</span>
         <span class="step">直角の一歩のふくらみ：√(1²＋0.001²) ＝ 1.0000005…（歩幅の2乗レベル → 刻みを細かくすると消える）</span>
         <span class="step">よって、動く向きが常にロープと直角なら距離1のまま ＝ 単位円の上を進む</span>
         <span class="step">ラジアン ＝ 角度を「単位円の弧の長さ」で測る流儀。円周＝2πr より、一周＝2π、半周＝π、4分の1周＝π/2</span>
         <span class="step">速さ ＝ 今の量 × 1 ＝ 1　→　θ のあいだに歩く道のり ＝ 1 × θ ＝ θ（＝ラジアンで測った角度）</span>
-        <span class="step">まとめ：e^iθ ＝ 単位円の上を、弧の長さ θ だけ回った点</span>
+        <span class="step">まとめ：e<sup>iθ</sup> ＝ 単位円の上を、弧の長さ θ だけ回った点</span>
       </div>
 
       <div class="quiz-head">確認クイズ</div>
@@ -618,17 +618,17 @@
       </div>
 
       <div class="quiz-card" data-quiz data-answer="1">
-        <p class="quiz-q">Q2. 関数 e^x の特徴として正しいのは？</p>
+        <p class="quiz-q">Q2. 関数 e<sup>x</sup> の特徴として正しいのは？</p>
         <div class="choice-list">
           <button class="choice-btn">増える速さが、常に今の量とぴったり等しい</button>
           <button class="choice-btn">常に一定の速さで増える</button>
           <button class="choice-btn">増え方がだんだん止まる</button>
         </div>
-        <div class="quiz-explain" hidden>正解！ 2^xなども「量に比例」して増えるけれど、速さが今の量とぴったり等しく（1倍に）なるのは e^x だけ。この性質が e^iθ の回転の話を支えている。</div>
+        <div class="quiz-explain" hidden>正解！ 2<sup>x</sup>なども「量に比例」して増えるけれど、速さが今の量とぴったり等しく（1倍に）なるのは e<sup>x</sup> だけ。この性質が e<sup>iθ</sup> の回転の話を支えている。</div>
       </div>
 
       <div class="quiz-card" data-quiz data-answer="2">
-        <p class="quiz-q">Q3. θ を増やしていくと、e^iθ の点はガウス平面上でどう動く？</p>
+        <p class="quiz-q">Q3. θ を増やしていくと、e<sup>iθ</sup> の点はガウス平面上でどう動く？</p>
         <div class="choice-list">
           <button class="choice-btn">実軸の上をまっすぐ進む</button>
           <button class="choice-btn">単位円の上をぐるぐる回る</button>
