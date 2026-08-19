@@ -326,32 +326,33 @@
       </div>
 
       <div class="diagram-box">
-        <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.1）の拡大図。3本の曲線はほぼ直線で、その傾きがちょうど0.69、1、2.3になっている">
-          <line class="axis" x1="70" y1="250" x2="425" y2="250"></line>
-          <polygon points="425,250 416,245 416,255" fill="var(--ink)"></polygon>
-          <line class="axis" x1="70" y1="272" x2="70" y2="20"></line>
-          <polygon points="70,20 65,29 75,29" fill="var(--ink)"></polygon>
-          <text class="ttl" x="78" y="32">スタート付近を拡大（0 ≤ x ≤ 0.1）</text>
-          <text class="note" x="78" y="50">点線 ＝ 最初の傾きのまま、まっすぐ進んだ場合</text>
-          <text class="tick-label" x="70" y="266" text-anchor="middle">0</text>
-          <text class="tick-label" x="400" y="266" text-anchor="middle">0.1</text>
-          <text class="tick-label" x="62" y="254" text-anchor="end">1</text>
-          <!-- 傾きの点線（初速の直線）：y = 1 + 定数×x -->
-          <line class="tg-ten" x1="70" y1="250" x2="400" y2="81.3"></line>
-          <line class="tg-e" x1="70" y1="250" x2="400" y2="176.7"></line>
-          <line class="tg-two" x1="70" y1="250" x2="400" y2="199.4"></line>
-          <text class="slope-label" x="404" y="85" style="fill:#2f8f65">傾き 2.3</text>
-          <text class="slope-label" x="404" y="181" style="fill:var(--gold-dark)">傾き 1</text>
-          <text class="slope-label" x="404" y="204" style="fill:#2f6fa6">傾き 0.69</text>
+        <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.3）を縦横同じ目盛りで拡大した図。傾き1の点線はちょうど45度で、3本の曲線の出だしの傾きが0.69、1、2.3になっていることが見える">
+          <text class="ttl" x="78" y="26">スタート付近を拡大（縦と横は同じ目盛り）</text>
+          <text class="note" x="78" y="44">点線 ＝ 出だしの傾きのまま、まっすぐ進んだ直線</text>
+          <line class="axis" x1="106" y1="280" x2="420" y2="280"></line>
+          <polygon points="420,280 411,275 411,285" fill="var(--ink)"></polygon>
+          <line class="axis" x1="120" y1="296" x2="120" y2="52"></line>
+          <polygon points="120,52 115,61 125,61" fill="var(--ink)"></polygon>
+          <text class="tick-label" x="120" y="294" text-anchor="end" dx="-6">0</text>
+          <text class="tick-label" x="340" y="294" text-anchor="middle">0.3</text>
+          <text class="tick-label" x="112" y="270" text-anchor="end">1</text>
+          <text class="tick-label" x="112" y="64" text-anchor="end">1.3</text>
+          <!-- 傾きの点線（初速の直線）：y = 1 + 定数×x（縦横等倍なので傾き1＝45°） -->
+          <line class="tg-ten" x1="120" y1="280" x2="215.6" y2="60"></line>
+          <line class="tg-e" x1="120" y1="280" x2="340" y2="60"></line>
+          <line class="tg-two" x1="120" y1="280" x2="340" y2="128.2"></line>
+          <text class="slope-label" x="216" y="84" style="fill:#2f8f65">傾き 2.3</text>
+          <text class="slope-label" x="346" y="64" style="fill:var(--gold-dark)">傾き 1（45°）</text>
+          <text class="slope-label" x="346" y="132" style="fill:#2f6fa6">傾き 0.69</text>
           <!-- 曲線本体 -->
-          <polyline class="ln-ten" points="70,250 136,215.5 202,179.2 268,141.3 334,101.7 400,60.1"></polyline>
-          <polyline class="ln-e" points="70,250 136,235.2 202,220.1 268,204.7 334,188.9 400,172.9"></polyline>
-          <polyline class="ln-two" points="70,250 136,239.8 202,229.4 268,218.9 334,208.2 400,197.4"></polyline>
-          <text class="curve-label" x="250" y="125" style="fill:#2f8f65">10^x</text>
-          <text class="curve-label" x="336" y="176" style="fill:var(--gold-dark)">e^x</text>
-          <text class="curve-label" x="336" y="228" style="fill:#2f6fa6">2^x</text>
+          <polyline class="ln-ten" points="120,280 138.3,236.5 156.7,190.5 175,141.8 193.3,90.2 203.5,60"></polyline>
+          <polyline class="ln-e" points="120,280 156.7,242.4 193.3,202.9 230,161.4 266.7,117.6 303.3,71.4 312.4,60"></polyline>
+          <polyline class="ln-two" points="120,280 156.7,254.1 193.3,227.4 230,199.6 266.7,170.9 303.3,141.3 340,110.5"></polyline>
+          <text class="curve-label" x="138" y="88" style="fill:#2f8f65">10^x</text>
+          <text class="curve-label" x="240" y="108" style="fill:var(--gold-dark)">e^x</text>
+          <text class="curve-label" x="346" y="110" style="fill:#2f6fa6">2^x</text>
         </svg>
-        <div class="diagram-caption">スタート付近を拡大すると3本はほぼ直線で、その傾き（点線）がちょうど 0.69・1・2.3。さっき電卓で出てきた定数は「スタート地点での曲線の傾き」だったのだ。曲線が点線から少しずつ上へ離れていくのは、量が増えるにつれ増えるペース自体も速くなっていくから</div>
+        <div class="diagram-caption">縦と横の目盛りをそろえてスタート付近を拡大した図。「傾き1」の点線はちょうど45°の坂になり、出だしの傾きが 0.69＜1＜2.3 の順であることが見た目どおりにわかる。電卓で出てきた定数は「スタート地点での曲線の傾き」だったのだ。曲線が点線から上へ離れていくのは、量が増えるほど増えるペース自体も速くなるから</div>
       </div>
 
       <div class="dialogue-scene">
