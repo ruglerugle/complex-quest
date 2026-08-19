@@ -63,6 +63,8 @@
   .zoom-svg .tg-ten{stroke:#2f8f65;stroke-width:1.6;stroke-dasharray:5 4;opacity:.75}
   .zoom-svg .slope-label{font-size:11px;font-weight:850}
   .zoom-svg .curve-label{font-size:12px;font-weight:900}
+  .dual-graph{display:flex;flex-wrap:wrap;gap:10px;align-items:flex-start;justify-content:center}
+  .dual-graph svg{flex:1 1 300px;min-width:270px;max-width:460px}
   .circle-svg .axis{stroke:var(--ink);stroke-width:1.5}
   .circle-svg .axis-label{fill:var(--ink);font-size:11px;font-weight:800}
   .circle-svg .circle{fill:none;stroke:var(--line);stroke-width:1.5;stroke-dasharray:4 4}
@@ -292,6 +294,7 @@
       </div>
 
       <div class="diagram-box">
+        <div class="dual-graph">
         <svg class="exp-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="2^x、e^x、10^x のグラフ。3本ともスタートは1で、定数0.69、1、2.3の順に立ち上がりが急になる">
           <line class="axis" x1="70" y1="250" x2="435" y2="250"></line>
           <polygon points="435,250 426,245 426,255" fill="var(--ink)"></polygon>
@@ -322,10 +325,6 @@
             <line class="ln-two" x1="290" y1="225" x2="318" y2="225"></line><text class="lg" x="324" y="229" style="fill:#2f6fa6">2^x（定数 0.69）</text>
           </g>
         </svg>
-        <div class="diagram-caption">3本ともスタートは同じ1で、「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が 0.69＜1＜2.3 の順に、立ち上がりが急になる。e^x はその真ん中、定数ちょうど1の基準カーブ</div>
-      </div>
-
-      <div class="diagram-box">
         <svg class="zoom-svg" viewBox="0 0 460 300" width="100%" role="img" aria-label="スタート付近（xが0から0.3）を縦横同じ目盛りで拡大した図。傾き1の点線はちょうど45度で、3本の曲線の出だしの傾きが0.69、1、2.3になっていることが見える">
           <text class="ttl" x="78" y="26">スタート付近を拡大（縦と横は同じ目盛り）</text>
           <text class="note" x="78" y="44">点線 ＝ 出だしの傾きのまま、まっすぐ進んだ直線</text>
@@ -352,7 +351,8 @@
           <text class="curve-label" x="240" y="108" style="fill:var(--gold-dark)">e^x</text>
           <text class="curve-label" x="346" y="110" style="fill:#2f6fa6">2^x</text>
         </svg>
-        <div class="diagram-caption">縦と横の目盛りをそろえてスタート付近を拡大した図。「傾き1」の点線はちょうど45°の坂になり、出だしの傾きが 0.69＜1＜2.3 の順であることが見た目どおりにわかる。電卓で出てきた定数は「スタート地点での曲線の傾き」だったのだ。曲線が点線から上へ離れていくのは、量が増えるほど増えるペース自体も速くなるから</div>
+        </div>
+        <div class="diagram-caption">1枚目：3本ともスタートは同じ1で、「量に比例して増える」カーブ仲間。定数（＝連続複利の年利）が 0.69＜1＜2.3 の順に立ち上がりが急になる。2枚目（拡大図）：縦横の目盛りをそろえてスタート付近を拡大すると「傾き1」の点線はちょうど45°の坂になり、電卓で出てきた定数が「スタート地点での曲線の傾き」そのものだとわかる。曲線が点線から上へ離れていくのは、量が増えるほど増えるペース自体も速くなるから</div>
       </div>
 
       <div class="dialogue-scene">
