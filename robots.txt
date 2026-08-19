@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ruglerugle.github.io/complex-quest/sitemap.xml
+Sitemap: https://complex-number.habatakijuku.com/sitemap.xml
