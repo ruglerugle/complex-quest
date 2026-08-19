@@ -378,7 +378,35 @@
             <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">さあ、ここからが今日のクライマックスだ。指数のxに、<strong>虚数 iθ</strong> を入れたら何が起きるか。e^x の成長は「進む向きに、今の量と同じ大きさの速さで伸びる」。ところが<strong>×i は90度回転</strong>だったね。つまり e^iθ の成長は――<strong>常に進行方向と直角</strong>に働く。</div>
+          <div class="dialog-bubble">さあ、ここからが今日のクライマックスだ。指数の x に、<strong>虚数 iθ</strong> を入れてみたい。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">待ってください。i を「掛ける」と90度回転するのは分かりました。でも i を「指数に乗せる」……<strong>i乗</strong>って、そもそも何ですか？ 「i回掛ける」なんて、回数の意味が分かりません。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">素晴らしい、そこを疑うのが正しい。素朴に「i回掛ける」と読んでも、たしかに意味はない。そこで数学者は、e^x を<strong>掛け算だけの形</strong>に書き直してから x に iθ を入れるんだ。連続複利を思い出そう。e^x は（1＋x/n）のn乗の、nを限りなく大きくしたもの――つまり<strong>「1＋ほんの少し」を莫大な回数、掛け合わせたもの</strong>だった。この形なら、xが虚数でも意味がはっきりする。<strong>e^iθ ＝（1＋iθ/n）を n回掛けたもの</strong>。ただの複素数の掛け算の繰り返しだから、これまでの道具がそのまま使えるよ。</div>
+        </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbit.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">（1＋iθ/n）は、ガウス平面でいうと「1 から真上に θ/n だけ上がった点」……。長さはほとんど1で、偏角はほんの少し。ということは、これを掛けるたびに、点は<strong>ほんの少しだけ回転する</strong>んですね！</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/catThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">その通り。たとえば θ＝1、n＝1000 なら、（1＋0.001i）を掛けるたびに点は約0.001ずつ回り、1000回で合計およそ1回る。<strong>「i乗」の正体は、微小な回転の積み重ね</strong>なんだ。別の見方をすると、×（1＋0.001i）＝「今の量」＋「今の量×i×0.001」。一歩ごとに、<strong>今の量と同じ大きさのペースで、i の方向――自分から見て直角――へ</strong>進んでいる。e^x の「今の量に等しい速さで伸びる」成長が、i のせいで<strong>直角方向に曲げられた</strong>わけだ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -467,6 +495,7 @@
       </div>
 
       <div class="formula-box">
+        <span class="step">i乗の意味：e^iθ ＝（1＋iθ/n）ⁿ（nは限りなく大きく）……「1＋微小×i」を掛け続ける ＝ 微小回転の積み重ね</span>
         <span class="step">「遠ざかる／近づく」＝ロープ方向の動き。直角の動きには、ロープ方向の成分がない</span>
         <span class="step">直角の一歩のふくらみ：√(1²＋0.001²) ＝ 1.0000005…（歩幅の2乗レベル → 刻みを細かくすると消える）</span>
         <span class="step">よって、動く向きが常にロープと直角なら距離1のまま ＝ 単位円の上を進む</span>
