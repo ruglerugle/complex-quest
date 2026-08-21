@@ -295,7 +295,7 @@
             <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
             <div class="dialog-name mentor">ねこ博士</div>
           </div>
-          <div class="dialog-bubble">やってみよう。ここで注意がひとつ。e<sup>i×180</sup> と、<strong>度の数値をそのまま指数に入れてはいけない</strong>よ。e の指数に入れてよいのは<strong>弧の長さの数値だけ</strong>。e<sup>i×180</sup> は「弧の長さ180」――半周どころか約28周半も回った先の、まったく別の点を指してしまう。だから度で書くなら、1度は π/180 ラジアンだから、角度 d 度を <strong>e<sup>i×d×π/180</sup>＝cos d°＋i sin d°</strong> と、弧の長さに直してから入れる。ここに d＝180 を入れると……180 が約分されて、結局 e<sup>iπ</sup> に戻ってしまう。<strong>π は消せない</strong>んだ。</div>
+          <div class="dialog-bubble">やってみよう。ここで注意がひとつ。e<sup>i×180</sup> と、<strong>度の数値をそのまま指数に入れてはいけない</strong>よ。e の指数に入れてよいのは<strong>弧の長さの数値だけ</strong>。e<sup>i×180</sup> は「弧の長さ180」――半周どころか約28周半も回った先の、まったく別の点を指してしまう。だから度で書くなら、1度は π/180 ラジアンだから、角度 d 度を <strong>e<sup>i×d×π/180</sup>＝cos d°＋i sin d°</strong> と、弧の長さに直してから入れる。ここに d＝180 を入れると……180 が約分されて、結局 e<sup>iπ</sup> に戻ってしまう。<strong>e を主役にしたまま角度の単位だけ変えても、π は換算係数として式のどこかに残り続ける</strong>んだ。</div>
         </div>
         <div class="dialog-row right">
           <div class="dialog-character">
@@ -315,7 +315,7 @@
 
       <div class="formula-box">
         <span class="step">e の指数に入れてよいのは弧の長さ（ラジアンの数値）だけ。e<sup>i×180</sup> は「180ラジアン ＝ 約28周半」のまったく別の点</span>
-        <span class="step">度数で書くと：e<sup>i×d×π/180</sup> ＝ cos d°＋i sin d°　→　d＝180 では 180 が約分され、e<sup>iπ</sup> に戻る（πは消せない）</span>
+        <span class="step">度数で書くと：e<sup>i×d×π/180</sup> ＝ cos d°＋i sin d°　→　d＝180 では 180 が約分され、e<sup>iπ</sup> に戻る（e を使う限り π は換算係数として残る）</span>
         <span class="step">無理やり度数版：ζ（ゼータ）＝ cos 1°＋i sin 1° ≈ 0.99985＋0.01745i として　ζ¹⁸⁰＋1＝0　……正しいが、e も π も消えてしまう</span>
       </div>
 
