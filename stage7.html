@@ -326,13 +326,29 @@
           </div>
           <div class="dialog-bubble">いい質問だ。そのとおり、1より大きい数の x乗はどれも「今の量に比例」して増える。ここで<strong>「増える速さ」の測り方</strong>をはっきりさせておこう。車のスピードメーターが「いまの時速」を表示できるのは、<strong>ごく短い時間に進んだ距離を、かかった時間で割っている</strong>からなんだ。増える量でも同じことができる。ちなみに、こうして「瞬間の変化の速さ」を求める計算には<strong>微分</strong>という名前が付いている――ここでは名前だけ知っていれば十分だよ。では実際に、x を 0.001 だけ進めて電卓で計算してみよう。</div>
         </div>
+        <div class="dialog-row right">
+          <div class="dialog-character">
+            <div class="dialog-avatar student"><img src="images/rabbitThink.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name student">うさ美</div>
+          </div>
+          <div class="dialog-bubble">やってみます。いまの量が e<sup>x</sup> だとして、x が 0.001 進むと e<sup>x＋0.001</sup>。指数法則で e<sup>x＋0.001</sup>＝e<sup>x</sup>×e<sup>0.001</sup> だから、電卓で e<sup>0.001</sup>≈1.0010005……。つまり<strong>いまの量がいくつであっても、0.001 のあいだに必ず 1.0010005 倍</strong>になるんですね。</div>
+        </div>
+        <div class="dialog-row">
+          <div class="dialog-character">
+            <div class="dialog-avatar mentor"><img src="images/cat.webp" width="300" height="386" alt=""></div>
+            <div class="dialog-name mentor">ねこ博士</div>
+          </div>
+          <div class="dialog-bubble">その通り。だから増えた量は、今の量 × 0.0010005。これを、かかった時間 0.001 で割ると、<strong>速さ ＝ 今の量 × 1.0005…</strong>。刻みを 0.001 よりさらに細かくしていくと、端数の 0005… はどこまでも消えていって、<strong>速さ ＝ 今の量 × ぴったり1</strong> に近づいていく。残高100万円なら1年あたり約100万円のペース、200万円に育った瞬間には約200万円のペース――さっきの預金の話の通りだね。同じ計算を 2<sup>x</sup> と 10<sup>x</sup> でもやってみよう。</div>
+        </div>
       </div>
 
       <div class="formula-box">
         <span class="step">瞬間の増える速さ ＝（ごく短い時間に増えた量）÷（かかった時間）　……これを求める計算が「微分」</span>
+        <span class="step">指数法則より e<sup>x＋0.001</sup> ＝ e<sup>x</sup> × e<sup>0.001</sup>　→　0.001 進むごとに、今の量がどこにいても同じ e<sup>0.001</sup> 倍になる</span>
         <span class="step">e<sup>0.001</sup> ＝ 1.0010005…　→ 0.001 の間に、今の量の約 0.0010 倍増えた　→ 速さ ＝ 今の量 × <strong>1.0</strong></span>
         <span class="step">2<sup>0.001</sup> ＝ 1.000693…　→ 0.001 の間に、今の量の約 0.00069 倍増えた　→ 速さ ＝ 今の量 × <strong>0.69</strong></span>
         <span class="step">10<sup>0.001</sup> ＝ 1.002305…　→ 0.001 の間に、今の量の約 0.0023 倍増えた　→ 速さ ＝ 今の量 × <strong>2.3</strong></span>
+        <span class="step">まとめ：e<sup>x</sup> の増える速さは、いつでも e<sup>x</sup> 自身 ―― 微分の言葉でいえば<strong>「e<sup>x</sup> は微分しても e<sup>x</sup> のまま」</strong>。微分しても姿の変わらない、特別な関数</span>
       </div>
 
       <div class="dialogue-scene">
